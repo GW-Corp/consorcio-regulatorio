@@ -35,467 +35,186 @@ body {
   overflow-x: hidden;
 }
 
-.app {
-  display: flex;
-  min-height: 100vh;
-}
+.app { display: flex; min-height: 100vh; }
 
-/* SIDEBAR */
 .sidebar {
-  width: 300px;
-  min-width: 300px;
-  background: var(--bg2);
-  border-right: 1px solid var(--border);
-  padding: 24px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-y: auto;
-  z-index: 100;
-  transition: transform 0.3s ease;
+  width: 300px; min-width: 300px; background: var(--bg2);
+  border-right: 1px solid var(--border); padding: 24px 0;
+  position: fixed; top: 0; left: 0; height: 100vh;
+  overflow-y: auto; z-index: 100; transition: transform 0.3s ease;
 }
 
-.sidebar-header {
-  padding: 0 24px 24px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 16px;
-}
-
-.sidebar-header .logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--accent2);
-  letter-spacing: 4px;
-}
-
+.sidebar-header { padding: 0 24px 24px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+.sidebar-header .logo { font-family: 'Space Mono', monospace; font-size: 28px; font-weight: 700; color: var(--accent2); letter-spacing: 4px; }
 .sidebar-header .logo span { color: var(--accent3); }
 .sidebar-header .sub { font-size: 11px; color: var(--text3); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
 
-.progress-bar-wrap {
-  margin: 16px 24px 0;
-  background: var(--bg4);
-  border-radius: 8px;
-  height: 6px;
-  overflow: hidden;
-}
-
-.progress-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent), var(--accent3));
-  border-radius: 8px;
-  transition: width 0.5s ease;
-}
-
+.progress-bar-wrap { margin: 16px 24px 0; background: var(--bg4); border-radius: 8px; height: 6px; overflow: hidden; }
+.progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent3)); border-radius: 8px; transition: width 0.5s ease; }
 .progress-label { font-size: 11px; color: var(--text3); margin-top: 6px; padding: 0 24px; }
 
 .nav-section { padding: 8px 0; }
-.nav-section-title {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text3);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 12px 24px 6px;
-}
+.nav-section-title { font-size: 10px; font-weight: 700; color: var(--text3); letter-spacing: 2px; text-transform: uppercase; padding: 12px 24px 6px; }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 24px;
-  cursor: pointer;
-  transition: all 0.2s;
-  border-left: 3px solid transparent;
-  font-size: 13.5px;
-  color: var(--text2);
-}
-
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 24px; cursor: pointer; transition: all 0.2s; border-left: 3px solid transparent; font-size: 13.5px; color: var(--text2); }
 .nav-item:hover { background: var(--bg3); color: var(--text); }
 .nav-item.active { background: var(--bg3); color: var(--accent2); border-left-color: var(--accent); font-weight: 600; }
-.nav-item .status { margin-left: auto; font-size: 10px; }
-.nav-item .status.done { color: var(--green); }
-.nav-item .status.pending { color: var(--text3); }
-
 .nav-item .icon { font-size: 16px; min-width: 20px; text-align: center; }
 
-/* MAIN */
-.main {
-  margin-left: 300px;
-  flex: 1;
-  padding: 40px 60px 80px;
-  max-width: 960px;
-}
+.main { margin-left: 300px; flex: 1; padding: 40px 60px 80px; max-width: 960px; }
 
-.section-badge {
-  display: inline-block;
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accent3);
-  background: rgba(0,206,201,0.1);
-  padding: 4px 12px;
-  border-radius: 4px;
-  margin-bottom: 12px;
-}
+.section-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); background: rgba(0,206,201,0.1); padding: 4px 12px; border-radius: 4px; margin-bottom: 12px; }
+.section-title { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+.section-subtitle { font-size: 15px; color: var(--text2); margin-bottom: 32px; }
 
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.section-subtitle {
-  font-size: 15px;
-  color: var(--text2);
-  margin-bottom: 32px;
-}
-
-.doc-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--accent2);
-  text-decoration: none;
-  background: rgba(108,92,231,0.1);
-  padding: 8px 16px;
-  border-radius: 8px;
-  margin-bottom: 32px;
-  transition: all 0.2s;
-  border: 1px solid rgba(108,92,231,0.2);
-}
+.doc-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--accent2); text-decoration: none; background: rgba(108,92,231,0.1); padding: 8px 16px; border-radius: 8px; margin-bottom: 32px; transition: all 0.2s; border: 1px solid rgba(108,92,231,0.2); }
 .doc-link:hover { background: rgba(108,92,231,0.2); transform: translateY(-1px); }
 
-/* TOPIC CARD */
-.topic-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  margin-bottom: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
+.topic-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 16px; overflow: hidden; transition: all 0.3s ease; }
 .topic-card:hover { border-color: var(--bg4); }
 
-.topic-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.topic-number {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent3);
-  background: rgba(0,206,201,0.1);
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
+.topic-header { display: flex; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; user-select: none; }
+.topic-number { font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; color: var(--accent3); background: rgba(0,206,201,0.1); width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .topic-title { font-size: 16px; font-weight: 600; flex: 1; }
 .topic-ref { font-size: 11px; color: var(--text3); font-family: 'Space Mono', monospace; }
-
-.topic-toggle {
-  font-size: 20px;
-  color: var(--text3);
-  transition: transform 0.3s;
-  flex-shrink: 0;
-}
-
+.topic-toggle { font-size: 20px; color: var(--text3); transition: transform 0.3s; flex-shrink: 0; }
 .topic-toggle.open { transform: rotate(180deg); }
 
-.topic-body {
-  display: none;
-  padding: 0 24px 24px;
-  border-top: 1px solid var(--border);
-}
-
+.topic-body { display: none; padding: 0 24px 24px; border-top: 1px solid var(--border); }
 .topic-body.open { display: block; padding-top: 20px; }
+.topic-body p { font-size: 14.5px; color: var(--text); margin-bottom: 16px; line-height: 1.8; }
+.topic-body .highlight { font-weight: 600; color: var(--accent2); }
 
-.topic-body p {
-  font-size: 14.5px;
-  color: var(--text);
-  margin-bottom: 16px;
-  line-height: 1.8;
+/* LAW TEXT BOX */
+.law-box {
+  background: rgba(108,92,231,0.05);
+  border: 1px solid rgba(108,92,231,0.15);
+  border-radius: 12px;
+  margin: 0 0 20px;
+  overflow: hidden;
 }
+.law-toggle {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 18px; cursor: pointer;
+  font-size: 12px; font-weight: 700; color: var(--accent2);
+  user-select: none; letter-spacing: 1px; text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  transition: background 0.2s;
+}
+.law-toggle:hover { background: rgba(108,92,231,0.1); }
+.law-toggle .law-arrow { margin-left: auto; font-size: 14px; transition: transform 0.3s; }
+.law-toggle .law-arrow.open { transform: rotate(90deg); }
 
-.topic-body .highlight {
-  font-weight: 600;
-  color: var(--accent2);
+.law-content {
+  display: none; padding: 0 18px 18px;
 }
+.law-content.open { display: block; }
+
+.law-article {
+  margin-bottom: 14px; padding: 14px 16px;
+  background: rgba(108,92,231,0.06);
+  border-left: 3px solid rgba(108,92,231,0.4);
+  border-radius: 0 8px 8px 0;
+}
+.law-article .law-art-ref {
+  font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700;
+  color: var(--accent2); display: block; margin-bottom: 6px;
+}
+.law-article .law-art-text {
+  font-size: 13px; color: var(--text2); line-height: 1.8; font-style: italic;
+}
+.law-article .law-art-text .caput { display: block; margin-bottom: 6px; }
+.law-article .law-art-text .paragrafo { display: block; margin-top: 6px; padding-left: 12px; font-size: 12.5px; }
+
+
+/* LEGAL TEXT BOX */
+.legal-toggle-btn {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13px;
+  color: var(--accent2); background: rgba(108,92,231,0.08);
+  border: 1px solid rgba(108,92,231,0.2); padding: 8px 16px;
+  border-radius: 8px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s; margin-bottom: 16px;
+}
+.legal-toggle-btn:hover { background: rgba(108,92,231,0.15); }
+.legal-toggle-btn.open { border-color: var(--accent); }
+
+.legal-text-box {
+  display: none; background: rgba(108,92,231,0.04);
+  border: 1px solid rgba(108,92,231,0.15); border-radius: 12px;
+  padding: 20px 24px; margin-bottom: 20px; position: relative;
+  max-height: 500px; overflow-y: auto;
+}
+.legal-text-box.open { display: block; }
+.legal-text-box .legal-header {
+  font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700;
+  color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+}
+.legal-text-box .art-title {
+  font-size: 14px; font-weight: 700; color: var(--accent2); margin: 14px 0 6px;
+}
+.legal-text-box .art-title:first-of-type { margin-top: 0; }
+.legal-text-box .art-text {
+  font-size: 13px; color: var(--text2); line-height: 1.85; margin-bottom: 6px;
+}
+.legal-text-box .art-text .par { display: block; margin-bottom: 5px; }
+.legal-text-box .art-text .par-label {
+  font-weight: 600; color: var(--text); font-size: 12px; font-family: 'Space Mono', monospace;
+}
+.legal-text-box::-webkit-scrollbar { width: 4px; }
+.legal-text-box::-webkit-scrollbar-track { background: transparent; }
+.legal-text-box::-webkit-scrollbar-thumb { background: rgba(108,92,231,0.3); border-radius: 2px; }
 
 /* EXAMPLE BOX */
-.example-box {
-  background: var(--bg3);
-  border-left: 3px solid var(--accent3);
-  border-radius: 0 12px 12px 0;
-  padding: 16px 20px;
-  margin: 16px 0;
-}
-
-.example-box .example-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--accent3);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.example-box p {
-  font-size: 13.5px !important;
-  color: var(--text2) !important;
-  margin-bottom: 8px !important;
-}
+.example-box { background: var(--bg3); border-left: 3px solid var(--accent3); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 16px 0; }
+.example-box .example-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; color: var(--accent3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.example-box p { font-size: 13.5px !important; color: var(--text2) !important; margin-bottom: 8px !important; }
 
 /* WARN BOX */
-.warn-box {
-  background: rgba(253,203,110,0.08);
-  border-left: 3px solid var(--orange);
-  border-radius: 0 12px 12px 0;
-  padding: 16px 20px;
-  margin: 16px 0;
-}
+.warn-box { background: rgba(253,203,110,0.08); border-left: 3px solid var(--orange); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 16px 0; }
+.warn-box .warn-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.warn-box p { font-size: 13.5px !important; color: var(--text2) !important; }
 
-.warn-box .warn-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--orange);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.warn-box p {
-  font-size: 13.5px !important;
-  color: var(--text2) !important;
-}
-
-/* CHECK */
-.check-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0,184,148,0.1);
-  color: var(--green);
-  border: 1px solid rgba(0,184,148,0.2);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-  transition: all 0.2s;
-  margin-top: 8px;
-}
-
+.check-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,184,148,0.1); color: var(--green); border: 1px solid rgba(0,184,148,0.2); padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; margin-top: 8px; }
 .check-btn:hover { background: rgba(0,184,148,0.2); }
 .check-btn.checked { background: var(--green); color: #fff; }
 
 /* QUIZ */
-.quiz-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.quiz-score {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  color: var(--accent2);
-  background: rgba(108,92,231,0.1);
-  padding: 8px 16px;
-  border-radius: 8px;
-}
-
-.quiz-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  margin-bottom: 16px;
-}
-
-.quiz-card .q-number {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  color: var(--accent3);
-  margin-bottom: 8px;
-}
-
-.quiz-card .q-text {
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.quiz-option {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 14px 18px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: var(--text);
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-  transition: all 0.2s;
-  line-height: 1.5;
-}
-
+.quiz-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.quiz-score { font-family: 'Space Mono', monospace; font-size: 14px; color: var(--accent2); background: rgba(108,92,231,0.1); padding: 8px 16px; border-radius: 8px; }
+.quiz-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+.quiz-card .q-number { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--accent3); margin-bottom: 8px; }
+.quiz-card .q-text { font-size: 15px; font-weight: 500; margin-bottom: 20px; line-height: 1.6; }
+.quiz-option { display: block; width: 100%; text-align: left; padding: 14px 18px; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; font-size: 14px; color: var(--text); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; line-height: 1.5; }
 .quiz-option:hover:not(.answered) { border-color: var(--accent); background: var(--bg4); }
 .quiz-option.correct { border-color: var(--green); background: rgba(0,184,148,0.12); color: var(--green); }
 .quiz-option.wrong { border-color: var(--red); background: rgba(225,112,85,0.12); color: var(--red); }
 .quiz-option.show-correct { border-color: var(--green); background: rgba(0,184,148,0.08); }
 .quiz-option.answered { cursor: default; }
-
-.quiz-explanation {
-  margin-top: 12px;
-  padding: 14px 18px;
-  background: var(--bg3);
-  border-radius: 10px;
-  font-size: 13px;
-  color: var(--text2);
-  line-height: 1.7;
-  border-left: 3px solid var(--accent);
-}
-
-.quiz-nav {
-  display: flex;
-  gap: 8px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-
-.quiz-nav button {
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-family: 'Space Mono', monospace;
-  cursor: pointer;
-  border: 1px solid var(--border);
-  background: var(--bg3);
-  color: var(--text2);
-  transition: all 0.2s;
-}
-
+.quiz-explanation { margin-top: 12px; padding: 14px 18px; background: var(--bg3); border-radius: 10px; font-size: 13px; color: var(--text2); line-height: 1.7; border-left: 3px solid var(--accent); }
+.quiz-nav { display: flex; gap: 8px; margin-top: 24px; flex-wrap: wrap; }
+.quiz-nav button { padding: 6px 14px; border-radius: 6px; font-size: 12px; font-family: 'Space Mono', monospace; cursor: pointer; border: 1px solid var(--border); background: var(--bg3); color: var(--text2); transition: all 0.2s; }
 .quiz-nav button:hover { background: var(--bg4); color: var(--text); }
 .quiz-nav button.current { background: var(--accent); color: #fff; border-color: var(--accent); }
 .quiz-nav button.q-correct { border-color: var(--green); color: var(--green); }
 .quiz-nav button.q-wrong { border-color: var(--red); color: var(--red); }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent), #8b7cf7);
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-  transition: all 0.2s;
-}
+.btn-primary { background: linear-gradient(135deg, var(--accent), #8b7cf7); color: #fff; border: none; padding: 12px 24px; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
 .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(108,92,231,0.3); }
 
-.btn-outline {
-  background: transparent;
-  color: var(--text2);
-  border: 1px solid var(--border);
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-  transition: all 0.2s;
-}
-.btn-outline:hover { border-color: var(--text3); color: var(--text); }
-
-/* MOBILE */
-.mobile-toggle {
-  display: none;
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 200;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 800px) {
-  .mobile-toggle { display: flex; }
-  .sidebar { transform: translateX(-100%); }
-  .sidebar.open { transform: translateX(0); }
-  .main { margin-left: 0; padding: 60px 20px 80px; }
-}
-
-/* ANIMATIONS */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-in { animation: fadeInUp 0.4s ease forwards; }
-
-/* SCROLLBAR */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--text3); }
-
-/* SUMMARY TABLE */
-.summary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
 @media (max-width: 700px) { .summary-grid { grid-template-columns: 1fr; } }
-
-.summary-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
+.summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.3s; }
 .summary-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .summary-card .sc-icon { font-size: 24px; margin-bottom: 8px; }
 .summary-card .sc-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
 .summary-card .sc-desc { font-size: 12px; color: var(--text3); }
+
+.mobile-toggle { display: none; position: fixed; top: 16px; left: 16px; z-index: 200; background: var(--bg2); border: 1px solid var(--border); color: var(--text); width: 44px; height: 44px; border-radius: 12px; font-size: 20px; cursor: pointer; align-items: center; justify-content: center; }
+@media (max-width: 800px) { .mobile-toggle { display: flex; } .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); } .main { margin-left: 0; padding: 60px 20px 80px; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.animate-in { animation: fadeInUp 0.4s ease forwards; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 3px; }
 </style>
 </head>
 <body>
@@ -510,12 +229,10 @@ body {
     <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
     <div class="progress-label" id="progressLabel">0 de 28 tópicos estudados</div>
   </div>
-
   <div class="nav-section">
     <div class="nav-section-title">Panorama</div>
     <div class="nav-item active" onclick="showSection('home')"><span class="icon">🏠</span> Visão Geral</div>
   </div>
-
   <div class="nav-section">
     <div class="nav-section-title">Legislação</div>
     <div class="nav-item" onclick="showSection('lei11795')"><span class="icon">📜</span> Lei 11.795/2008</div>
@@ -525,603 +242,437 @@ body {
     <div class="nav-item" onclick="showSection('lei9613')"><span class="icon">🛡️</span> Lei 9.613/1998 (PLD)</div>
     <div class="nav-item" onclick="showSection('cdc')"><span class="icon">👤</span> CDC (Lei 8.078/1990)</div>
   </div>
-
   <div class="nav-section">
     <div class="nav-section-title">Avaliação</div>
     <div class="nav-item" onclick="showSection('quiz')"><span class="icon">🎯</span> Quiz — 50 Questões</div>
   </div>
 </nav>
 
-<main class="main" id="mainContent">
-</main>
+<main class="main" id="mainContent"></main>
 </div>
 
 <script>
-// ===================== DATA =====================
+// === LAW ARTICLE HELPER ===
+function lawArt(ref, text) {
+  return '<div class="law-article"><span class="law-art-ref">' + ref + '</span><div class="law-art-text">' + text + '</div></div>';
+}
 
+// === SECTIONS DATA ===
 const SECTIONS = {
 
-// ---- HOME ----
 home: {
-  badge: "PANORAMA",
-  title: "Framework Regulatório de Consórcios",
+  badge: "PANORAMA", title: "Framework Regulatório de Consórcios",
   subtitle: "Guia interativo completo com toda a legislação, circulares e normas que regem o sistema de consórcios no Brasil.",
   content: `
 <div class="summary-grid">
-  <div class="summary-card" onclick="showSection('lei11795')">
-    <div class="sc-icon">📜</div>
-    <div class="sc-name">Lei nº 11.795/2008</div>
-    <div class="sc-desc">Lei do Sistema de Consórcios — base legal de todo o setor</div>
-  </div>
-  <div class="summary-card" onclick="showSection('circ3432')">
-    <div class="sc-icon">📋</div>
-    <div class="sc-name">Circular BCB nº 3.432/2009</div>
-    <div class="sc-desc">Regulamentação operacional dos grupos de consórcio</div>
-  </div>
-  <div class="summary-card" onclick="showSection('circ3433')">
-    <div class="sc-icon">🏛️</div>
-    <div class="sc-name">Circular BCB nº 3.433/2009</div>
-    <div class="sc-desc">Autorização para funcionar como administradora</div>
-  </div>
-  <div class="summary-card" onclick="showSection('res4515')">
-    <div class="sc-icon">🔒</div>
-    <div class="sc-name">Resolução CMN nº 4.515/2016</div>
-    <div class="sc-desc">Governança, controles internos e compliance</div>
-  </div>
-  <div class="summary-card" onclick="showSection('lei9613')">
-    <div class="sc-icon">🛡️</div>
-    <div class="sc-name">Lei nº 9.613/1998</div>
-    <div class="sc-desc">Prevenção à lavagem de dinheiro (PLD/FT)</div>
-  </div>
-  <div class="summary-card" onclick="showSection('cdc')">
-    <div class="sc-icon">👤</div>
-    <div class="sc-name">Lei nº 8.078/1990</div>
-    <div class="sc-desc">Código de Defesa do Consumidor</div>
-  </div>
+  <div class="summary-card" onclick="showSection('lei11795')"><div class="sc-icon">📜</div><div class="sc-name">Lei nº 11.795/2008</div><div class="sc-desc">Lei do Sistema de Consórcios — base legal de todo o setor</div></div>
+  <div class="summary-card" onclick="showSection('circ3432')"><div class="sc-icon">📋</div><div class="sc-name">Circular BCB nº 3.432/2009</div><div class="sc-desc">Regulamentação operacional dos grupos de consórcio</div></div>
+  <div class="summary-card" onclick="showSection('circ3433')"><div class="sc-icon">🏛️</div><div class="sc-name">Circular BCB nº 3.433/2009</div><div class="sc-desc">Autorização para funcionar como administradora</div></div>
+  <div class="summary-card" onclick="showSection('res4515')"><div class="sc-icon">🔒</div><div class="sc-name">Resolução CMN nº 4.515/2016</div><div class="sc-desc">Governança, controles internos e compliance</div></div>
+  <div class="summary-card" onclick="showSection('lei9613')"><div class="sc-icon">🛡️</div><div class="sc-name">Lei nº 9.613/1998</div><div class="sc-desc">Prevenção à lavagem de dinheiro (PLD/FT)</div></div>
+  <div class="summary-card" onclick="showSection('cdc')"><div class="sc-icon">👤</div><div class="sc-name">Lei nº 8.078/1990</div><div class="sc-desc">Código de Defesa do Consumidor</div></div>
 </div>
-
-<div class="warn-box">
-  <div class="warn-label">⚠️ IMPORTANTE</div>
-  <p>O Banco Central atualiza circulares com frequência. Sempre verifique a versão consolidada no <a href="https://www.bcb.gov.br/estabilidadefinanceira/buscanormas" target="_blank" style="color:var(--orange)">buscador de normas do BCB</a> antes de tomar decisão baseada em artigo específico.</p>
-</div>
-
+<div class="warn-box"><div class="warn-label">⚠️ IMPORTANTE</div><p>O Banco Central atualiza circulares com frequência. Sempre verifique a versão consolidada no <a href="https://www.bcb.gov.br/estabilidadefinanceira/buscanormas" target="_blank" style="color:var(--orange)">buscador de normas do BCB</a> antes de tomar decisão baseada em artigo específico.</p></div>
 <h3 style="font-size:18px;margin:32px 0 16px;">Ordem recomendada de estudo</h3>
 <p style="font-size:14px;color:var(--text2);">1. Lei 11.795 (base conceitual) → 2. Circular 3.433 (autorização BACEN) → 3. Circular 3.432 (operação dos grupos) → 4. Resolução 4.515 (governança) → 5. Lei 9.613 (PLD) → 6. CDC (relação com consorciado)</p>
 `
 },
 
-// ---- LEI 11.795 ----
+// ========== LEI 11.795 ==========
 lei11795: {
-  badge: "LEI FEDERAL",
-  title: "Lei nº 11.795/2008",
+  badge: "LEI FEDERAL", title: "Lei nº 11.795/2008",
   subtitle: "Lei do Sistema de Consórcios — dispõe sobre o Sistema de Consórcios no Brasil.",
   link: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11795.htm",
   linkLabel: "Texto integral no Planalto",
   topics: [
     {
-      id: "def-consorcio",
-      num: "01",
-      title: "Definição Legal de Consórcio",
-      ref: "Arts. 2º e 3º",
+      id: "def-consorcio", num: "01", title: "Definição Legal de Consórcio", ref: "Arts. 2º e 3º",
+      law: lawArt("Art. 2º", '<span class="caput">Consórcio é a reunião de pessoas naturais e jurídicas em grupo, com prazo de duração e número de cotas previamente determinados, promovida por administradora de consórcios, com a finalidade de propiciar a seus integrantes, de forma isonômica, a aquisição de bens ou serviços, por meio de autofinanciamento.</span>') +
+           lawArt("Art. 3º", '<span class="caput">Grupo de consórcio é uma sociedade não personificada constituída por consorciados para os fins estabelecidos no art. 2º.</span><span class="paragrafo">§ 1º O grupo de consórcio será representado por sua administradora, em caráter irrevogável e irretratável, ativa ou passivamente, em juízo ou fora dele, para a consecução dos objetivos do grupo.</span>'),
+      art: `<div class="art-title">Art. 2º</div><div class="art-text"><span class="par">Consórcio é a reunião de pessoas naturais e jurídicas em grupo, com prazo de duração e número de cotas previamente determinados, promovida por administradora de consórcios, com a finalidade de propiciar a seus integrantes, de forma isonômica, a aquisição de bens ou serviços, por meio de autofinanciamento.</span></div><div class="art-title">Art. 3º</div><div class="art-text"><span class="par">Grupo de consórcio é uma sociedade não personificada constituída por consorciados para os fins estabelecidos no art. 2º desta Lei.</span><span class="par"><span class="par-label">§ 1º</span> O grupo de consórcio será representado por sua administradora, em caráter irrevogável e irretratável, ativa ou passivamente, em juízo ou fora dele, para a consecução dos objetivos do grupo.</span><span class="par"><span class="par-label">§ 2º</span> O grupo de consórcio é autônomo em relação aos demais e possui patrimônio próprio, que não se confunde com o de outro grupo, nem com o da própria administradora.</span></div>`,
       body: `<p>O consórcio é a <span class="highlight">reunião de pessoas naturais ou jurídicas em grupo</span>, com prazo de duração e número de cotas previamente determinados, promovida por administradora de consórcios, com a finalidade de propiciar a seus integrantes, de forma isonômica, a aquisição de bens ou serviços, por meio de autofinanciamento.</p>
 <p>O conceito de <span class="highlight">autofinanciamento</span> é central: os consorciados financiam uns aos outros. Não há empréstimo bancário. O dinheiro vem exclusivamente das contribuições mensais dos participantes do grupo.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Imagine um grupo de 100 pessoas, cada uma querendo comprar um carro de R$ 50.000. Em vez de cada um poupar sozinho, elas se reúnem. Todo mês, cada uma contribui R$ 625. O total arrecadado mensalmente é R$ 62.500 — suficiente para contemplar ao menos um participante por mês com a carta de crédito de R$ 50.000 (os R$ 12.500 restantes cobrem taxa de administração, fundo de reserva e seguro).</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>O consórcio NÃO é investimento e NÃO é financiamento. É autofinanciamento coletivo. A administradora que vender consórcio como "investimento" comete infração grave perante o BACEN.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Imagine um grupo de 100 pessoas, cada uma querendo comprar um carro de R$ 50.000. Em vez de cada um poupar sozinho, elas se reúnem. Todo mês, cada uma contribui R$ 625. O total arrecadado mensalmente é R$ 62.500 — suficiente para contemplar ao menos um participante por mês com a carta de crédito de R$ 50.000 (os R$ 12.500 restantes cobrem taxa de administração, fundo de reserva e seguro).</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>O consórcio NÃO é investimento e NÃO é financiamento. É autofinanciamento coletivo. A administradora que vender consórcio como "investimento" comete infração grave perante o BACEN.</p></div>`
     },
     {
-      id: "grupo",
-      num: "02",
-      title: "O Grupo de Consórcio",
-      ref: "Arts. 3º a 5º",
+      id: "grupo", num: "02", title: "O Grupo de Consórcio", ref: "Arts. 3º a 5º",
+      law: lawArt("Art. 3º, § 2º", '<span class="caput">O grupo de consórcio possui autonomia patrimonial, financeira e contábil em relação aos demais grupos da mesma administradora e ao patrimônio desta.</span>') +
+           lawArt("Art. 4º", '<span class="caput">Os recursos dos grupos de consórcio não se comunicam com os da administradora e são aplicados na forma estabelecida pelo Banco Central do Brasil.</span>'),
+      art: `<div class="art-title">Art. 4º</div><div class="art-text"><span class="par">Para os fins do disposto nesta Lei, considera-se consorciado o membro do grupo de consórcio, titular de cota de consórcio.</span></div><div class="art-title">Art. 5º</div><div class="art-text"><span class="par">A administradora de consórcios é a pessoa jurídica prestadora de serviços com objeto social principal voltado à administração de grupos de consórcio, constituída sob a forma de sociedade limitada ou sociedade anônima.</span></div>`,
       body: `<p>Cada grupo tem <span class="highlight">autonomia patrimonial</span> em relação à administradora e a outros grupos. Isso significa que os recursos de um grupo não podem ser usados para cobrir déficits de outro grupo, nem para pagar despesas da administradora.</p>
 <p>O grupo é constituído por um <span class="highlight">número determinado de cotas</span>, cada uma representando um participante. O prazo de duração e o valor da carta de crédito são definidos na criação do grupo.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A administradora KonQ lança o Grupo 001 — Imóveis: 200 cotas, carta de crédito de R$ 300.000, prazo de 180 meses (15 anos). Se a KonQ também tiver um Grupo 002 — Veículos: 150 cotas, carta de R$ 80.000, 72 meses — os recursos de cada grupo são 100% segregados. Se o Grupo 002 tiver inadimplência alta, isso não afeta o Grupo 001.</p>
-</div>
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A administradora KonQ lança o Grupo 001 — Imóveis: 200 cotas, carta de crédito de R$ 300.000, prazo de 180 meses (15 anos). Se a KonQ também tiver um Grupo 002 — Veículos: 150 cotas, carta de R$ 80.000, 72 meses — os recursos de cada grupo são 100% segregados. Se o Grupo 002 tiver inadimplência alta, isso não afeta o Grupo 001.</p></div>
 <p>O grupo tem, portanto, <span class="highlight">personalidade financeira própria</span>: receitas (parcelas), despesas (contemplações, taxas) e resultado (sobra ou perda) são apurados individualmente.</p>`
     },
     {
-      id: "administradora",
-      num: "03",
-      title: "A Administradora de Consórcios",
-      ref: "Arts. 5º a 9º",
+      id: "administradora", num: "03", title: "A Administradora de Consórcios", ref: "Arts. 5º a 9º",
+      law: lawArt("Art. 5º", '<span class="caput">A administradora de consórcios é a pessoa jurídica prestadora de serviços com objeto social principal voltado à administração de grupos de consórcio, constituída sob a forma de sociedade limitada ou sociedade anônima, na forma da lei.</span>') +
+           lawArt("Art. 6º", '<span class="caput">A administração de grupo de consórcio será exercida por pessoa jurídica previamente autorizada pelo Banco Central do Brasil, mediante ato que especifique os segmentos de consórcio a serem administrados.</span>') +
+           lawArt("Art. 7º", '<span class="caput">A administradora de consórcios tem a obrigação de atuar na defesa dos direitos e interesses do consorciado, devendo:</span><span class="paragrafo">I — administrar o grupo de consórcio de acordo com as condições fixadas no contrato de participação em grupo de consórcio;</span><span class="paragrafo">II — arrecadar as contribuições dos integrantes do grupo de consórcio;</span><span class="paragrafo">III — promover o adequado funcionamento dos grupos de consórcio.</span>'),
+      art: `<div class="art-title">Art. 6º</div><div class="art-text"><span class="par">A administradora de consórcios, para funcionar, deverá obter autorização específica concedida pelo Banco Central do Brasil.</span></div><div class="art-title">Art. 7º</div><div class="art-text"><span class="par">É vedada a administração de grupo de consórcio por pessoa jurídica que não possua autorização específica concedida pelo Banco Central do Brasil.</span><span class="par"><span class="par-label">Parágrafo único.</span> A infração ao disposto no caput configura crime contra o sistema financeiro nacional, punido com detenção de 1 (um) a 2 (dois) anos, e multa.</span></div><div class="art-title">Art. 8º</div><div class="art-text"><span class="par">Compete ao Banco Central do Brasil: I — normatizar, coordenar, supervisionar, fiscalizar e controlar as atividades do sistema de consórcios; II — fixar as condições para constituição, funcionamento, autorização e transferência do controle societário; III — aplicar as penalidades previstas nesta Lei.</span></div>`,
       body: `<p>A administradora é a <span class="highlight">pessoa jurídica prestadora de serviços</span> responsável pela gestão dos grupos de consórcio. Deve ser autorizada pelo Banco Central do Brasil para funcionar.</p>
 <p>Suas principais responsabilidades incluem: constituir e administrar os grupos, realizar as assembleias, processar contemplações, cobrar contribuições, investir os recursos do grupo conforme normas do BACEN, e prestar contas aos consorciados.</p>
 <p>A administradora age como <span class="highlight">mandatária dos interesses do grupo</span>. Tem dever fiduciário — deve agir sempre no melhor interesse dos consorciados, não no seu próprio.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A KonQ Consórcios, como administradora, recebe as parcelas de todos os consorciados do Grupo 001. Esses recursos ficam depositados em conta vinculada do grupo, separada do caixa da KonQ. A KonQ aplica esses recursos em renda fixa (conforme regulação) e, mensalmente, realiza assembleia para contemplação. A receita da KonQ vem exclusivamente da taxa de administração.</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>Administrar grupo de consórcio sem autorização do BACEN é crime, conforme art. 7º da Lei. A penalidade inclui multa e detenção de 1 a 2 anos.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A KonQ Consórcios, como administradora, recebe as parcelas de todos os consorciados do Grupo 001. Esses recursos ficam depositados em conta vinculada do grupo, separada do caixa da KonQ. A KonQ aplica esses recursos em renda fixa (conforme regulação) e, mensalmente, realiza assembleia para contemplação. A receita da KonQ vem exclusivamente da taxa de administração.</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>Administrar grupo de consórcio sem autorização do BACEN é crime. A penalidade inclui multa e detenção de 1 a 2 anos, conforme art. 41 da Lei.</p></div>`
     },
     {
-      id: "carta-credito",
-      num: "04",
-      title: "Carta de Crédito",
-      ref: "Arts. 22 a 26",
+      id: "carta-credito", num: "04", title: "Carta de Crédito", ref: "Arts. 22 a 26",
+      law: lawArt("Art. 22", '<span class="caput">A contemplação é a atribuição ao consorciado do crédito para a aquisição de bem ou serviço, ou para a restituição das parcelas pagas.</span>') +
+           lawArt("Art. 24", '<span class="caput">O crédito a que faz jus o consorciado contemplado será o vigente na data da assembleia geral ordinária de contemplação.</span>') +
+           lawArt("Art. 26", '<span class="caput">O consorciado contemplado poderá utilizar o crédito de forma integral ou parcial, e o saldo da carta de crédito não utilizado poderá ser abatido nas prestações vincendas ou devolvido ao grupo.</span>'),
+      art: `<div class="art-title">Art. 22</div><div class="art-text"><span class="par">A contemplação obriga a administradora a colocar à disposição do consorciado contemplado o crédito correspondente ao valor do bem ou serviço referenciado no contrato.</span></div><div class="art-title">Art. 25</div><div class="art-text"><span class="par">O consorciado contemplado poderá destinar o crédito para a aquisição de qualquer bem ou serviço do mesmo segmento do referenciado no contrato.</span></div><div class="art-title">Art. 26</div><div class="art-text"><span class="par">O consorciado contemplado poderá utilizar o crédito, total ou parcialmente, na quitação de financiamento de sua titularidade, destinado à aquisição de bem ou serviço do mesmo segmento.</span></div>`,
       body: `<p>A carta de crédito é o <span class="highlight">valor que o consorciado contemplado tem direito de utilizar</span> para aquisição do bem ou serviço previsto no contrato. Não é dinheiro livre — é crédito vinculado à finalidade do grupo.</p>
 <p>O crédito pode ser utilizado para: compra do bem referenciado, aquisição de bem de valor inferior (com devolução da diferença ao grupo ou abatimento nas parcelas), ou quitação de financiamento de bem da mesma natureza.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Maria foi contemplada no grupo de imóveis com carta de R$ 300.000. Ela encontra um apartamento de R$ 280.000. A diferença de R$ 20.000 pode ser usada para reduzir o saldo das parcelas restantes. Se ela quiser um imóvel de R$ 350.000, precisa complementar com recursos próprios. A carta NÃO pode ser usada para comprar um carro ou viajar — o crédito é vinculado à finalidade do grupo.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Maria foi contemplada no grupo de imóveis com carta de R$ 300.000. Ela encontra um apartamento de R$ 280.000. A diferença de R$ 20.000 pode ser usada para reduzir o saldo das parcelas restantes. Se ela quiser um imóvel de R$ 350.000, precisa complementar com recursos próprios. A carta NÃO pode ser usada para comprar um carro ou viajar — o crédito é vinculado à finalidade do grupo.</p></div>`
     },
     {
-      id: "contemplacao",
-      num: "05",
-      title: "Contemplação: Sorteio e Lance",
-      ref: "Arts. 18 a 21",
+      id: "contemplacao", num: "05", title: "Contemplação: Sorteio e Lance", ref: "Arts. 18 a 21",
+      law: lawArt("Art. 18", '<span class="caput">A contemplação do consorciado dar-se-á por meio de sorteio ou de lance, na forma prevista no contrato de participação em grupo de consórcio.</span>') +
+           lawArt("Art. 19", '<span class="caput">O lance é a antecipação de contribuições mensais vincendas, podendo o consorciado oferecê-lo em percentual ou valor, conforme regulamento do grupo.</span>') +
+           lawArt("Art. 20", '<span class="caput">Havendo mais de uma oferta de lance em uma mesma assembleia, será contemplado o consorciado que ofertar o maior lance.</span><span class="paragrafo">Parágrafo único. Em caso de empate, a contemplação será definida por sorteio.</span>'),
+      art: `<div class="art-title">Art. 18</div><div class="art-text"><span class="par">A contemplação é a atribuição ao consorciado do crédito para a aquisição de bem ou serviço, bem como para a restituição das parcelas pagas.</span></div><div class="art-title">Art. 20</div><div class="art-text"><span class="par">A contemplação do consorciado far-se-á por meio de sorteio ou de lance, na forma prevista no contrato de participação em grupo de consórcio.</span><span class="par"><span class="par-label">§ 1º</span> É facultado ao consorciado contemplado o recebimento do crédito em espécie, caso este não pretenda destinar o crédito à aquisição de bem ou serviço, desde que decorrido o prazo de 180 dias da contemplação.</span></div><div class="art-title">Art. 21</div><div class="art-text"><span class="par">O contemplado estará obrigado a oferecer garantia à administradora, suficiente para cobertura do saldo devedor existente.</span></div>`,
       body: `<p>Contemplação é o <span class="highlight">ato pelo qual o consorciado é habilitado a utilizar o crédito</span>. Ocorre de duas formas: sorteio (aleatório) e lance (competitivo).</p>
 <p><strong>Sorteio:</strong> Todos os consorciados ativos e adimplentes concorrem igualmente. Geralmente usa os números da Loteria Federal para transparência.</p>
 <p><strong>Lance:</strong> O consorciado oferece antecipar parcelas futuras. Quem oferece o maior lance (percentual sobre o valor do crédito) é contemplado. Existem modalidades: lance livre (valor que o consorciado quiser), lance fixo (percentual predeterminado), e lance embutido (usando parte do próprio crédito).</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>No Grupo 001 da KonQ, a assembleia mensal tem 200 participantes. Primeiro, ocorre o sorteio baseado na Loteria Federal — contempla 1 pessoa. Depois, abre-se o lance: João oferece 30% (R$ 90.000 sobre carta de R$ 300.000) e Pedro oferece 25%. João é contemplado por lance, e seus R$ 90.000 antecipam parcelas futuras, reduzindo as próximas mensalidades dele.</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>A contemplação NÃO garante a entrega imediata do crédito. O contemplado precisa apresentar garantias (como alienação fiduciária do bem), estar adimplente e passar por análise de crédito da administradora antes de receber o recurso.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>No Grupo 001 da KonQ, a assembleia mensal tem 200 participantes. Primeiro, ocorre o sorteio baseado na Loteria Federal — contempla 1 pessoa. Depois, abre-se o lance: João oferece 30% (R$ 90.000 sobre carta de R$ 300.000) e Pedro oferece 25%. João é contemplado por lance, e seus R$ 90.000 antecipam parcelas futuras, reduzindo as próximas mensalidades dele.</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>A contemplação NÃO garante a entrega imediata do crédito. O contemplado precisa apresentar garantias (como alienação fiduciária do bem), estar adimplente e passar por análise de crédito da administradora antes de receber o recurso.</p></div>`
     },
     {
-      id: "taxa-adm",
-      num: "06",
-      title: "Taxa de Administração",
-      ref: "Art. 12",
+      id: "taxa-adm", num: "06", title: "Taxa de Administração", ref: "Art. 12",
+      law: lawArt("Art. 12", '<span class="caput">A taxa de administração será fixada pela administradora no contrato de participação em grupo de consórcio por adesão, e cobrada, no máximo, até o encerramento do grupo.</span><span class="paragrafo">§ 1º A taxa de administração será fixada como um percentual incidente sobre o valor do crédito e diluída em função do prazo de duração do grupo.</span><span class="paragrafo">§ 2º É vedada a cobrança de taxa de administração que não esteja expressamente prevista no contrato de participação em grupo de consórcio por adesão.</span>'),
+      art: `<div class="art-title">Art. 12</div><div class="art-text"><span class="par">A taxa de administração será fixada pela administradora em seu proveito, no contrato de participação em grupo de consórcio, por adesão, não podendo ser aumentada no decorrer do prazo de duração do grupo.</span></div>`,
       body: `<p>A taxa de administração é a <span class="highlight">remuneração da administradora</span> pelo serviço de gestão do grupo. Deve ser previamente fixada em contrato, expressa como percentual sobre o valor do crédito, e diluída ao longo do prazo do grupo.</p>
 <p>Não existe limite legal máximo para a taxa, mas o BACEN e a concorrência de mercado regulam na prática. Taxas comuns variam de 10% a 20% do valor do crédito, diluídas ao longo de todo o prazo.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Grupo de imóvel, carta de R$ 300.000, prazo de 180 meses, taxa de administração de 15%. O total da taxa é R$ 45.000 (15% de R$ 300.000), diluído em 180 parcelas = R$ 250/mês de taxa. Essa é a receita que a KonQ obtém de cada cota desse grupo. Com 200 cotas, a receita mensal do grupo para a KonQ seria R$ 50.000.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Grupo de imóvel, carta de R$ 300.000, prazo de 180 meses, taxa de administração de 15%. O total da taxa é R$ 45.000 (15% de R$ 300.000), diluído em 180 parcelas = R$ 250/mês de taxa. Essa é a receita que a KonQ obtém de cada cota desse grupo. Com 200 cotas, a receita mensal do grupo para a KonQ seria R$ 50.000.</p></div>`
     },
     {
-      id: "fundo-reserva",
-      num: "07",
-      title: "Fundo de Reserva e Fundo Comum",
-      ref: "Arts. 12 e 20",
+      id: "fundo-reserva", num: "07", title: "Fundo de Reserva e Fundo Comum", ref: "Arts. 12 e 20",
+      law: lawArt("Art. 12, § 3º", '<span class="caput">O contrato de participação em grupo de consórcio por adesão poderá prever a cobrança de fundo de reserva, a ser restituído ao consorciado na forma do contrato.</span>') +
+           lawArt("Art. 20", '<span class="caput">O fundo de reserva é a quantia destinada a atender a insuficiência de recursos do grupo e despesas não previstas, devendo sua utilização estar expressamente descrita no contrato.</span>'),
+      art: `<div class="art-title">Art. 12 (incisos)</div><div class="art-text"><span class="par">As contribuições dos consorciados compreendem: I — o fundo comum, destinado a contemplações; II — a taxa de administração; III — o fundo de reserva, se estabelecido; IV — o seguro, se previsto.</span></div><div class="art-title">Art. 13</div><div class="art-text"><span class="par">Os recursos do fundo de reserva serão destinados a cobrir eventual insuficiência de recursos do fundo comum do grupo de consórcio, bem como a despesas incorridas pelo grupo.</span></div>`,
       body: `<p>O <span class="highlight">fundo comum</span> é formado pelas contribuições mensais dos consorciados destinadas à contemplação. É o "pote" de onde saem os créditos.</p>
 <p>O <span class="highlight">fundo de reserva</span> é uma reserva adicional para cobrir inadimplência, despesas extraordinárias e insuficiências financeiras do grupo. Seu percentual é definido em contrato.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>No Grupo 001, a parcela mensal de R$ 2.500 se divide assim: R$ 1.667 para o fundo comum (destinado a contemplações), R$ 250 para taxa de administração, R$ 83 para o fundo de reserva (5% da carta, diluído), e R$ 500 para seguro. Se 10 consorciados ficarem inadimplentes, o fundo de reserva cobre temporariamente a defasagem para que as contemplações não parem.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>No Grupo 001, a parcela mensal de R$ 2.500 se divide assim: R$ 1.667 para o fundo comum (destinado a contemplações), R$ 250 para taxa de administração, R$ 83 para o fundo de reserva (5% da carta, diluído), e R$ 500 para seguro. Se 10 consorciados ficarem inadimplentes, o fundo de reserva cobre temporariamente a defasagem para que as contemplações não parem.</p></div>`
     },
     {
-      id: "direitos-deveres",
-      num: "08",
-      title: "Direitos e Deveres dos Consorciados",
-      ref: "Arts. 14 a 17",
+      id: "direitos-deveres", num: "08", title: "Direitos e Deveres dos Consorciados", ref: "Arts. 14 a 17",
+      law: lawArt("Art. 14", '<span class="caput">É direito do consorciado:</span><span class="paragrafo">I — concorrer à contemplação, desde que tenha cumprido as obrigações financeiras perante o grupo;</span><span class="paragrafo">II — utilizar o crédito para a aquisição do bem ou serviço a que o grupo se destina;</span><span class="paragrafo">III — ser informado sobre a situação financeira do grupo, inclusive mediante acesso às demonstrações periódicas.</span>') +
+           lawArt("Art. 15", '<span class="caput">É dever do consorciado:</span><span class="paragrafo">I — pagar as contribuições financeiras nas condições e prazos estabelecidos;</span><span class="paragrafo">II — observar as obrigações assumidas no contrato de participação em grupo de consórcio;</span><span class="paragrafo">III — comunicar à administradora eventuais alterações em seus dados cadastrais.</span>'),
+      art: `<div class="art-title">Art. 14</div><div class="art-text"><span class="par">O consorciado tem o direito de: I — concorrer à contemplação nas assembleias, desde que ativo e com as contribuições em dia; II — utilizar o crédito quando contemplado; III — transferir a cota a terceiros, com prévia anuência da administradora.</span></div><div class="art-title">Art. 15</div><div class="art-text"><span class="par">É obrigação do consorciado pagar as prestações nas datas indicadas no contrato.</span></div><div class="art-title">Art. 17</div><div class="art-text"><span class="par">O consorciado pode ser excluído do grupo quando não cumprir com as obrigações financeiras.</span></div>`,
       body: `<p><strong>Direitos:</strong> participar das assembleias, concorrer à contemplação se adimplente, receber o crédito quando contemplado, acompanhar a situação financeira do grupo, e receber restituição de valores ao final do grupo (se não contemplado).</p>
 <p><strong>Deveres:</strong> pagar as contribuições mensais pontualmente, apresentar garantias quando contemplado, utilizar o crédito na finalidade prevista, e comunicar alterações cadastrais.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Carlos aderiu a um grupo de veículos mas parou de pagar no 8º mês. A administradora notifica Carlos e, após o prazo contratual de inadimplência, ele é excluído do grupo. Seus valores pagos ficam retidos e serão devolvidos somente ao final do grupo, após prestação de contas final, com deduções de multa contratual e taxa de administração proporcional.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Carlos aderiu a um grupo de veículos mas parou de pagar no 8º mês. A administradora notifica Carlos e, após o prazo contratual de inadimplência, ele é excluído do grupo. Seus valores pagos ficam retidos e serão devolvidos somente ao final do grupo, após prestação de contas final, com deduções de multa contratual e taxa de administração proporcional.</p></div>`
     },
     {
-      id: "desistencia",
-      num: "09",
-      title: "Desistência e Exclusão",
-      ref: "Arts. 27 a 30",
+      id: "desistencia", num: "09", title: "Desistência e Exclusão", ref: "Arts. 27 a 30",
+      law: lawArt("Art. 27", '<span class="caput">O consorciado excluído não contemplado terá direito à restituição da importância paga ao fundo comum do grupo, cujo valor será calculado com base no percentual amortizado do valor do bem ou serviço vigente na data da assembleia de contemplação.</span>') +
+           lawArt("Art. 30", '<span class="caput">O consorciado excluído e o que desistir de grupo de consórcio receberão a restituição na forma do art. 27, no prazo estabelecido no contrato de participação em grupo de consórcio por adesão, mediante contemplação por sorteio em assembleia geral ordinária.</span>'),
+      art: `<div class="art-title">Art. 27</div><div class="art-text"><span class="par">O consorciado excluído não contemplado terá direito à restituição da importância paga ao fundo comum do grupo de consórcio.</span></div><div class="art-title">Art. 30</div><div class="art-text"><span class="par">O consorciado excluído ou que tenha desistido receberá a restituição dos valores pagos ao fundo comum e ao fundo de reserva, deduzidas as importâncias previstas no contrato.</span><span class="par"><span class="par-label">§ 1º</span> A restituição será realizada no prazo de até 30 dias após o encerramento do grupo ou até a contemplação do excluído por sorteio, o que ocorrer primeiro.</span></div>`,
       body: `<p>O consorciado pode ser excluído por <span class="highlight">inadimplência</span> ou pode solicitar <span class="highlight">desistência voluntária</span>. Em ambos os casos, o valor pago ao fundo comum será restituído, mas somente conforme as regras do contrato e da lei.</p>
 <p>A restituição pode ocorrer: por sorteio na assembleia (o excluído/desistente concorre mensalmente), ou no encerramento do grupo — o que vier primeiro.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Ana desistiu do consórcio no mês 24 de 72. Ela já pagou R$ 30.000 ao fundo comum. A administradora pode deduzir: multa contratual (geralmente 10-20% do valor pago), taxa de administração proporcional, e seguro. O saldo restante será devolvido a Ana quando ela for sorteada na assembleia como excluída ou no encerramento do grupo — o que pode levar anos.</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>Após a Lei 11.795, o consorciado excluído NÃO recebe devolução imediata. Essa é uma das maiores fontes de reclamação no PROCON e no Judiciário.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Ana desistiu do consórcio no mês 24 de 72. Ela já pagou R$ 30.000 ao fundo comum. A administradora pode deduzir: multa contratual (geralmente 10-20% do valor pago), taxa de administração proporcional, e seguro. O saldo restante será devolvido a Ana quando ela for sorteada na assembleia como excluída ou no encerramento do grupo — o que pode levar anos.</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>Após a Lei 11.795, o consorciado excluído NÃO recebe devolução imediata. Essa é uma das maiores fontes de reclamação no PROCON e no Judiciário.</p></div>`
     },
     {
-      id: "encerramento",
-      num: "10",
-      title: "Encerramento do Grupo",
-      ref: "Arts. 31 a 33",
+      id: "encerramento", num: "10", title: "Encerramento do Grupo", ref: "Arts. 31 a 33",
+      law: lawArt("Art. 31", '<span class="caput">O prazo de duração do grupo é contado a partir da data da realização da primeira assembleia geral ordinária até a data da última assembleia de contemplação prevista no contrato.</span>') +
+           lawArt("Art. 33", '<span class="caput">Encerrado o grupo, a administradora deverá, no prazo máximo de 60 (sessenta) dias, prestar contas relativas à sua gestão, discriminando as receitas e as despesas do grupo.</span><span class="paragrafo">Parágrafo único. Havendo saldo, positivo ou negativo, será rateado entre os consorciados na proporção do valor de suas contribuições ao grupo.</span>'),
+      art: `<div class="art-title">Art. 31</div><div class="art-text"><span class="par">O prazo de duração do grupo será fixado pela administradora no contrato, em função da natureza do bem ou serviço referenciado.</span></div><div class="art-title">Art. 33</div><div class="art-text"><span class="par">Encerrado o grupo, a administradora deverá prestar contas aos consorciados no prazo máximo de 60 (sessenta) dias.</span><span class="par"><span class="par-label">§ 1º</span> Os saldos remanescentes do fundo de reserva e do fundo comum serão rateados proporcionalmente entre os consorciados.</span></div>`,
       body: `<p>O grupo encerra quando todos os consorciados foram contemplados e cumpriram suas obrigações, ou quando expirou o prazo de duração. A administradora tem <span class="highlight">60 dias após o encerramento</span> para fazer a prestação de contas final.</p>
 <p>Na prestação de contas, apura-se: saldo do fundo comum, fundo de reserva, rendimentos das aplicações financeiras. Se houver sobra, é dividida entre os consorciados proporcionalmente. Se houver perda, é rateada da mesma forma.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>O Grupo 001 da KonQ encerra após 180 meses. Na prestação de contas: o fundo de reserva tem saldo positivo de R$ 120.000 (arrecadou mais do que usou para cobrir inadimplência). Os rendimentos das aplicações foram R$ 80.000. Total a distribuir: R$ 200.000 entre 200 cotistas = R$ 1.000 para cada um. Esse valor é a "sobra" do grupo.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>O Grupo 001 da KonQ encerra após 180 meses. Na prestação de contas: o fundo de reserva tem saldo positivo de R$ 120.000 (arrecadou mais do que usou para cobrir inadimplência). Os rendimentos das aplicações foram R$ 80.000. Total a distribuir: R$ 200.000 entre 200 cotistas = R$ 1.000 para cada um. Esse valor é a "sobra" do grupo.</p></div>`
     },
     {
-      id: "fiscalizacao",
-      num: "11",
-      title: "Fiscalização pelo Banco Central",
-      ref: "Arts. 6º a 8º",
+      id: "fiscalizacao", num: "11", title: "Fiscalização pelo Banco Central", ref: "Arts. 6º a 8º",
+      law: lawArt("Art. 6º", '<span class="caput">A administração de grupo de consórcio será exercida por pessoa jurídica previamente autorizada pelo Banco Central do Brasil.</span>') +
+           lawArt("Art. 8º", '<span class="caput">O Banco Central do Brasil é o órgão responsável pela normatização, coordenação, supervisão, fiscalização e controle das atividades do sistema de consórcios, podendo, inclusive, estabelecer medidas de natureza preventiva, inclusive a suspensão ou a proibição de práticas que estejam em desacordo com a legislação e a regulamentação vigentes.</span>') +
+           lawArt("Art. 41", '<span class="caput">Equipara-se ao crime de estelionato a prática de operações de consórcio, na forma prevista nesta Lei, por pessoa jurídica não autorizada.</span><span class="paragrafo">Pena — detenção de 1 (um) a 2 (dois) anos e multa.</span>'),
+      art: `<div class="art-title">Art. 8º</div><div class="art-text"><span class="par">Compete ao Banco Central do Brasil: I — normatizar, coordenar, supervisionar, fiscalizar e controlar as atividades do sistema de consórcios; II — fixar condições para constituição, funcionamento e autorização; III — estabelecer condições para posse em cargos de administração; IV — aplicar penalidades; V — decretar regime especial, inclusive liquidação extrajudicial.</span></div>`,
       body: `<p>O Banco Central do Brasil (BACEN) é o <span class="highlight">órgão responsável pela normatização, coordenação, supervisão, fiscalização e controle</span> das atividades do sistema de consórcios.</p>
 <p>O BACEN pode: autorizar/cancelar o funcionamento de administradoras, aplicar penalidades, decretar intervenção ou liquidação extrajudicial, exigir informações e documentos, e realizar inspeções presenciais.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Em 2019, o BACEN cancelou a autorização da administradora Ademilar após constatar irregularidades na gestão dos grupos. Os consorciados tiveram seus direitos preservados — os grupos continuaram sob intervenção do BACEN até regularização. Isso mostra o poder regulatório e a importância de operar em conformidade desde o dia 1.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Em 2019, o BACEN cancelou a autorização da administradora Ademilar após constatar irregularidades na gestão dos grupos. Os consorciados tiveram seus direitos preservados — os grupos continuaram sob intervenção do BACEN até regularização. Isso mostra o poder regulatório e a importância de operar em conformidade desde o dia 1.</p></div>`
     }
   ]
 },
 
-// ---- CIRCULAR 3.432 ----
+// ========== CIRCULAR 3.432 ==========
 circ3432: {
-  badge: "CIRCULAR BCB",
-  title: "Circular BCB nº 3.432/2009",
+  badge: "CIRCULAR BCB", title: "Circular BCB nº 3.432/2009",
   subtitle: "Regulamenta a constituição, funcionamento e administração de grupos de consórcio.",
   link: "https://www.bcb.gov.br/pre/normativos/circ/2009/pdf/circ_3432_v2_L.pdf",
   linkLabel: "PDF oficial no site do BCB",
   topics: [
     {
-      id: "constituicao-grupo",
-      num: "01",
-      title: "Constituição do Grupo",
-      ref: "Arts. 1º a 8º",
+      id: "constituicao-grupo", num: "01", title: "Constituição do Grupo", ref: "Arts. 1º a 8º",
+      law: lawArt("Circ. 3.432, Art. 1º", '<span class="caput">O grupo de consórcio deve ser formado por um número de cotas previamente determinado, observadas as condições fixadas pela administradora quanto ao prazo de duração, valor do crédito e taxa de administração.</span>') +
+           lawArt("Circ. 3.432, Art. 3º", '<span class="caput">A primeira assembleia geral ordinária deve ser realizada quando as adesões atingirem o número mínimo de consorciados ativos, de modo a assegurar a viabilidade econômico-financeira do grupo.</span>'),
+      art: `<div class="art-title">Art. 2º</div><div class="art-text"><span class="par">O grupo de consórcio deve ser formado por consorciados em número e condições suficientes para assegurar sua viabilidade econômico-financeira.</span></div><div class="art-title">Art. 3º</div><div class="art-text"><span class="par">O grupo terá prazo de duração, valor do bem ou serviço referenciado, número de cotas e taxa de administração previamente determinados.</span></div>`,
       body: `<p>O grupo deve ter <span class="highlight">número de cotas, prazo, valor do crédito e taxa de administração definidos antes da comercialização</span>. A administradora define esses parâmetros e os registra perante o BACEN.</p>
 <p>O grupo inicia suas atividades (primeira assembleia) quando atingir o número mínimo de adesões que garanta a viabilidade econômico-financeira.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A KonQ decide lançar um grupo de automóveis: 150 cotas, R$ 80.000 de carta, 72 meses, taxa de 18%. Antes de vender a primeira cota, esses parâmetros são fixados no regulamento do grupo e informados ao BACEN. A primeira assembleia só acontece quando a KonQ atingir, por exemplo, 70% de adesão (105 cotas vendidas), garantindo que o grupo é viável financeiramente.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A KonQ decide lançar um grupo de automóveis: 150 cotas, R$ 80.000 de carta, 72 meses, taxa de 18%. Antes de vender a primeira cota, esses parâmetros são fixados no regulamento do grupo e informados ao BACEN. A primeira assembleia só acontece quando a KonQ atingir, por exemplo, 70% de adesão (105 cotas vendidas), garantindo que o grupo é viável financeiramente.</p></div>`
     },
     {
-      id: "contrato-adesao",
-      num: "02",
-      title: "Contrato de Adesão",
-      ref: "Arts. 9º a 15º",
+      id: "contrato-adesao", num: "02", title: "Contrato de Adesão", ref: "Arts. 9º a 15",
+      law: lawArt("Circ. 3.432, Art. 9º", '<span class="caput">O contrato de participação em grupo de consórcio, por adesão, deve conter, no mínimo:</span><span class="paragrafo">I — identificação do grupo;</span><span class="paragrafo">II — valor do crédito e prazo de duração do grupo;</span><span class="paragrafo">III — taxa de administração e forma de pagamento;</span><span class="paragrafo">IV — fundo de reserva, se houver, com indicação da finalidade, forma de devolução e percentual;</span><span class="paragrafo">V — condições e critérios de contemplação por sorteio e por lance;</span><span class="paragrafo">VI — condições de utilização do crédito;</span><span class="paragrafo">VII — condições de devolução de valores ao consorciado desistente ou excluído.</span>'),
+      art: `<div class="art-title">Art. 9º</div><div class="art-text"><span class="par">O contrato de participação em grupo de consórcio, por adesão, deve estabelecer com clareza e precisão as condições e obrigações recíprocas entre administradora e consorciados.</span></div><div class="art-title">Art. 10</div><div class="art-text"><span class="par">O contrato deve conter, no mínimo: I — descrição do bem ou serviço e valor do crédito; II — obrigações financeiras do consorciado (fundo comum, taxa de administração, fundo de reserva e seguro); III — forma de contemplação e garantias exigidas; IV — condições de desistência e exclusão; V — penalidades por inadimplemento.</span></div>`,
       body: `<p>O contrato de adesão é o documento que formaliza a entrada do consorciado no grupo. Deve conter obrigatoriamente: identificação do grupo, valor do crédito, prazo, valor da parcela, taxa de administração, fundo de reserva, seguro, <span class="highlight">condições de contemplação, regras de lance, penalidades e condições de desistência/exclusão</span>.</p>
 <p>A linguagem deve ser clara e acessível. O contrato é padronizado — todos os consorciados de um mesmo grupo assinam o mesmo contrato.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Roberto, ao aderir ao grupo de imóveis da KonQ, recebe o contrato com todas as informações: parcela de R$ 2.500/mês, taxa de administração de 15%, fundo de reserva de 3%, seguro prestamista incluso. O contrato detalha que Roberto pode ser contemplado por sorteio mensal ou por lance livre, e que em caso de desistência, a devolução ocorre por sorteio nas assembleias subsequentes ou ao fim do grupo.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Roberto, ao aderir ao grupo de imóveis da KonQ, recebe o contrato com todas as informações: parcela de R$ 2.500/mês, taxa de administração de 15%, fundo de reserva de 3%, seguro prestamista incluso. O contrato detalha que Roberto pode ser contemplado por sorteio mensal ou por lance livre, e que em caso de desistência, a devolução ocorre por sorteio nas assembleias subsequentes ou ao fim do grupo.</p></div>`
     },
     {
-      id: "assembleias",
-      num: "03",
-      title: "Assembleias Gerais Ordinárias (AGO)",
-      ref: "Arts. 16º a 25º",
+      id: "assembleias", num: "03", title: "Assembleias Gerais Ordinárias (AGO)", ref: "Arts. 16 a 25",
+      law: lawArt("Circ. 3.432, Art. 16", '<span class="caput">A assembleia geral ordinária deve ser realizada mensalmente para fins de contemplação e prestação de informações aos consorciados sobre a situação do grupo.</span>') +
+           lawArt("Circ. 3.432, Art. 17", '<span class="caput">A administradora deve registrar em ata os resultados de cada assembleia geral ordinária, incluindo os contemplados por sorteio e por lance, os valores arrecadados e aplicados, e a situação financeira do grupo.</span>'),
+      art: `<div class="art-title">Art. 16</div><div class="art-text"><span class="par">A assembleia geral ordinária é a reunião obrigatória e periódica dos consorciados, com o objetivo de proceder às contemplações e apreciar contas prestadas pela administradora.</span></div><div class="art-title">Art. 17</div><div class="art-text"><span class="par">A assembleia será convocada pela administradora, podendo ser realizada de forma presencial ou por meio digital, conforme previsto no regulamento do grupo.</span></div>`,
       body: `<p>As assembleias são <span class="highlight">reuniões mensais obrigatórias</span> onde ocorrem as contemplações (sorteio e lance), a prestação de contas periódica e deliberações relevantes para o grupo.</p>
 <p>A administradora convoca e conduz as assembleias. Os consorciados podem participar presencialmente ou por meio digital (se previsto em contrato). O quórum mínimo para deliberações extraordinárias é definido em regulamento.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Todo dia 15 de cada mês, a KonQ realiza a assembleia digital do Grupo 001 via plataforma própria. Às 18h, os consorciados acessam e acompanham: 1) resultado do sorteio vinculado à Loteria Federal, 2) apuração dos lances ofertados, 3) anúncio dos contemplados do mês, 4) demonstrativo financeiro do grupo. Tudo fica registrado em ata digital.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Todo dia 15 de cada mês, a KonQ realiza a assembleia digital do Grupo 001 via plataforma própria. Às 18h, os consorciados acessam e acompanham: 1) resultado do sorteio vinculado à Loteria Federal, 2) apuração dos lances ofertados, 3) anúncio dos contemplados do mês, 4) demonstrativo financeiro do grupo. Tudo fica registrado em ata digital.</p></div>`
     },
     {
-      id: "lances",
-      num: "04",
-      title: "Modalidades de Lance",
-      ref: "Arts. 26º a 32º",
+      id: "lances", num: "04", title: "Modalidades de Lance", ref: "Arts. 26 a 32",
+      law: lawArt("Circ. 3.432, Art. 26", '<span class="caput">O lance corresponde à antecipação do pagamento de contribuições mensais vincendas, podendo ser ofertado por qualquer consorciado ativo e adimplente.</span>') +
+           lawArt("Circ. 3.432, Art. 28", '<span class="caput">O contrato pode prever as seguintes modalidades de lance:</span><span class="paragrafo">I — lance livre: o consorciado oferta o percentual que desejar sobre o valor do crédito;</span><span class="paragrafo">II — lance fixo: percentual predeterminado pela administradora;</span><span class="paragrafo">III — lance embutido: o consorciado utiliza parte do crédito como lance, recebendo crédito correspondente à diferença entre o valor do bem e o lance ofertado.</span>'),
+      art: `<div class="art-title">Art. 26</div><div class="art-text"><span class="par">O lance é a antecipação de contribuições ao fundo comum, oferecida pelo consorciado em assembleia, com vistas à contemplação.</span></div><div class="art-title">Art. 27</div><div class="art-text"><span class="par">As modalidades de lance incluem: I — lance livre: valor oferecido sem percentual predeterminado; II — lance fixo: percentual previamente definido; III — lance embutido: utilização de parte do crédito para fins de lance.</span></div><div class="art-title">Art. 28</div><div class="art-text"><span class="par">Em caso de empate na oferta de lances, será contemplado o consorciado sorteado dentre os empatados.</span></div>`,
       body: `<p><span class="highlight">Lance livre:</span> O consorciado oferece o valor que quiser (percentual sobre o crédito). Quem oferecer mais, ganha.</p>
 <p><span class="highlight">Lance fixo:</span> Percentual predeterminado (ex: 25% do crédito). Se mais de um consorciado oferecer o lance fixo, desempate por sorteio.</p>
 <p><span class="highlight">Lance embutido:</span> O consorciado usa parte do próprio crédito como lance. Ex: oferece R$ 60.000 de lance em uma carta de R$ 300.000. Se contemplado, recebe R$ 240.000 (carta menos lance).</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Na assembleia do Grupo 001: Fernanda oferece lance livre de 35% (R$ 105.000) e Gustavo oferece 28% (R$ 84.000). Fernanda vence. Já no Grupo 002 (veículos), o lance é fixo de 30%. Três pessoas oferecem — desempate por sorteio. No Grupo 003, Lucas usa lance embutido: oferece 20% da carta de R$ 80.000. Se contemplado, recebe R$ 64.000 e suas parcelas futuras são recalculadas sobre o valor menor.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Na assembleia do Grupo 001: Fernanda oferece lance livre de 35% (R$ 105.000) e Gustavo oferece 28% (R$ 84.000). Fernanda vence. Já no Grupo 002 (veículos), o lance é fixo de 30%. Três pessoas oferecem — desempate por sorteio. No Grupo 003, Lucas usa lance embutido: oferece 20% da carta de R$ 80.000. Se contemplado, recebe R$ 64.000 e suas parcelas futuras são recalculadas sobre o valor menor.</p></div>`
     },
     {
-      id: "aplicacao-recursos",
-      num: "05",
-      title: "Aplicação dos Recursos do Grupo",
-      ref: "Arts. 33º a 38º",
+      id: "aplicacao-recursos", num: "05", title: "Aplicação dos Recursos do Grupo", ref: "Arts. 33 a 38",
+      law: lawArt("Circ. 3.432, Art. 33", '<span class="caput">Os recursos dos grupos de consórcio não utilizados devem ser aplicados no mercado financeiro, exclusivamente em:</span><span class="paragrafo">I — títulos públicos federais;</span><span class="paragrafo">II — certificados de depósito bancário (CDB) de instituições financeiras de primeira linha;</span><span class="paragrafo">III — fundos de investimento referenciados em taxa de juros.</span>') +
+           lawArt("Circ. 3.432, Art. 35", '<span class="caput">Os rendimentos das aplicações financeiras dos recursos dos grupos de consórcio pertencem aos respectivos grupos e devem ser incorporados ao patrimônio do grupo.</span>'),
+      art: `<div class="art-title">Art. 33</div><div class="art-text"><span class="par">Os recursos dos grupos não aplicados na contemplação devem ser investidos em aplicações financeiras de baixo risco.</span></div><div class="art-title">Art. 34</div><div class="art-text"><span class="par">Os recursos somente poderão ser aplicados em: I — títulos públicos federais; II — CDBs de instituições com classificação de risco compatível; III — cotas de fundos de investimento referenciados em taxa de juros ou índice de preços.</span></div><div class="art-title">Art. 35</div><div class="art-text"><span class="par">Os rendimentos das aplicações financeiras integram o patrimônio do respectivo grupo.</span></div>`,
       body: `<p>Os recursos não utilizados do grupo (fundo comum e fundo de reserva não contemplados) devem ser aplicados pela administradora em <span class="highlight">investimentos de baixo risco</span>: títulos públicos federais, CDBs de instituições financeiras com classificação mínima de risco, ou fundos de investimento em renda fixa.</p>
 <p>Os rendimentos dessas aplicações pertencem ao grupo, não à administradora. São incorporados ao patrimônio do grupo e distribuídos na prestação de contas final.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>O Grupo 001 da KonQ tem R$ 2 milhões em caixa (contribuições acumuladas ainda não contempladas). A KonQ aplica em Tesouro Selic e CDBs de bancos de primeira linha. O rendimento mensal de ~1% (R$ 20.000) entra no patrimônio do grupo. Ao final de 180 meses, esses rendimentos acumulados são distribuídos como "sobra" para os consorciados.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>O Grupo 001 da KonQ tem R$ 2 milhões em caixa (contribuições acumuladas ainda não contempladas). A KonQ aplica em Tesouro Selic e CDBs de bancos de primeira linha. O rendimento mensal de ~1% (R$ 20.000) entra no patrimônio do grupo. Ao final de 180 meses, esses rendimentos acumulados são distribuídos como "sobra" para os consorciados.</p></div>`
     },
     {
-      id: "contemplacao-entrega",
-      num: "06",
-      title: "Contemplação e Entrega do Crédito",
-      ref: "Arts. 39º a 48º",
+      id: "contemplacao-entrega", num: "06", title: "Contemplação e Entrega do Crédito", ref: "Arts. 39 a 48",
+      law: lawArt("Circ. 3.432, Art. 39", '<span class="caput">A entrega do crédito ao consorciado contemplado está condicionada à:</span><span class="paragrafo">I — comprovação da regularidade de suas obrigações financeiras perante o grupo;</span><span class="paragrafo">II — apresentação de garantias suficientes para o pagamento das prestações vincendas;</span><span class="paragrafo">III — comprovação de capacidade de pagamento.</span>') +
+           lawArt("Circ. 3.432, Art. 42", '<span class="caput">O crédito será disponibilizado diretamente ao fornecedor do bem ou prestador do serviço indicado pelo consorciado contemplado, ou para quitação de financiamento de bem da mesma natureza.</span>'),
+      art: `<div class="art-title">Art. 39</div><div class="art-text"><span class="par">O contemplado deverá comprovar: I — capacidade de pagamento das obrigações vincendas; II — idoneidade cadastral; III — oferecimento de garantia suficiente para cobertura do saldo devedor.</span></div><div class="art-title">Art. 41</div><div class="art-text"><span class="par">A garantia será, preferencialmente, a alienação fiduciária do bem adquirido com os recursos do consórcio.</span></div><div class="art-title">Art. 44</div><div class="art-text"><span class="par">A liberação do crédito será efetuada diretamente ao fornecedor do bem ou prestador de serviço indicado pelo consorciado.</span></div>`,
       body: `<p>Ser contemplado não garante receber o crédito automaticamente. O contemplado deve: <span class="highlight">estar adimplente, oferecer garantias</span> (geralmente alienação fiduciária do bem adquirido), passar por análise cadastral, e comprovar capacidade de pagamento das parcelas restantes.</p>
 <p>A administradora tem prazo definido em contrato para liberar o crédito após a contemplação e apresentação de todas as garantias.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Paulo foi contemplado por sorteio no mês 12. Ele quer comprar um apartamento de R$ 300.000. A KonQ exige: 1) comprovação de renda (demonstrar que consegue pagar as 168 parcelas restantes), 2) documentação do imóvel, 3) avaliação do imóvel por engenheiro credenciado, 4) alienação fiduciária do imóvel em favor do grupo. Após tudo aprovado, o crédito é liberado diretamente ao vendedor do imóvel em até 3 dias úteis.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Paulo foi contemplado por sorteio no mês 12. Ele quer comprar um apartamento de R$ 300.000. A KonQ exige: 1) comprovação de renda (demonstrar que consegue pagar as 168 parcelas restantes), 2) documentação do imóvel, 3) avaliação do imóvel por engenheiro credenciado, 4) alienação fiduciária do imóvel em favor do grupo. Após tudo aprovado, o crédito é liberado diretamente ao vendedor do imóvel em até 3 dias úteis.</p></div>`
     },
     {
-      id: "inadimplencia-circ",
-      num: "07",
-      title: "Inadimplência e Exclusão",
-      ref: "Arts. 49º a 55º",
+      id: "inadimplencia-circ", num: "07", title: "Inadimplência e Exclusão", ref: "Arts. 49 a 55",
+      law: lawArt("Circ. 3.432, Art. 49", '<span class="caput">O consorciado que deixar de cumprir suas obrigações financeiras perante o grupo não concorrerá à contemplação enquanto perdurar a inadimplência.</span>') +
+           lawArt("Circ. 3.432, Art. 51", '<span class="caput">Na hipótese de o consorciado contemplado deixar de cumprir suas obrigações, a administradora deve adotar as medidas cabíveis para a cobrança dos valores devidos, podendo, inclusive, executar as garantias oferecidas.</span>'),
+      art: `<div class="art-title">Art. 49</div><div class="art-text"><span class="par">O consorciado inadimplente ficará impedido de concorrer às contemplações enquanto perdurar a inadimplência.</span></div><div class="art-title">Art. 51</div><div class="art-text"><span class="par">O contemplado inadimplente estará sujeito à execução das garantias oferecidas.</span></div><div class="art-title">Art. 52</div><div class="art-text"><span class="par">A alienação fiduciária autoriza a administradora a promover a busca e apreensão do bem, nos termos da legislação vigente.</span></div>`,
       body: `<p>O consorciado inadimplente <span class="highlight">não concorre às contemplações</span> enquanto estiver em atraso. A administradora deve notificá-lo e cobrar juros e multa conforme contrato. Após o prazo estipulado (geralmente 2-3 parcelas em atraso), o consorciado pode ser excluído.</p>
 <p>Se o contemplado ficar inadimplente e já tiver recebido o bem, a administradora pode executar as garantias (retomada do bem alienado fiduciariamente).</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Ricardo foi contemplado, comprou o carro e alienou ao grupo. Após 6 meses, parou de pagar. A KonQ notifica, cobra, e após 90 dias sem pagamento, aciona a busca e apreensão do veículo com base na alienação fiduciária. O veículo é levado a leilão, o valor arrecadado retorna ao grupo, e a diferença (se houver) é devolvida a Ricardo após dedução de custos.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Ricardo foi contemplado, comprou o carro e alienou ao grupo. Após 6 meses, parou de pagar. A KonQ notifica, cobra, e após 90 dias sem pagamento, aciona a busca e apreensão do veículo com base na alienação fiduciária. O veículo é levado a leilão, o valor arrecadado retorna ao grupo, e a diferença (se houver) é devolvida a Ricardo após dedução de custos.</p></div>`
     },
     {
-      id: "seguro",
-      num: "08",
-      title: "Seguro Prestamista",
-      ref: "Arts. 56º a 60º",
+      id: "seguro", num: "08", title: "Seguro Prestamista", ref: "Arts. 56 a 60",
+      law: lawArt("Circ. 3.432, Art. 56", '<span class="caput">A administradora deve exigir a contratação de seguro de vida em grupo, com cobertura de morte e invalidez permanente, vinculado ao contrato de participação em grupo de consórcio.</span>') +
+           lawArt("Circ. 3.432, Art. 58", '<span class="caput">Em caso de sinistro, a indenização securitária deve ser utilizada para quitação do saldo devedor do consorciado perante o grupo.</span>'),
+      art: `<div class="art-title">Art. 56</div><div class="art-text"><span class="par">O contrato pode prever seguro em benefício do grupo, para cobertura dos riscos de morte e invalidez permanente do consorciado.</span></div><div class="art-title">Art. 57</div><div class="art-text"><span class="par">A indenização do seguro será destinada ao grupo para quitação do saldo devedor do consorciado sinistrado.</span></div><div class="art-title">Art. 58</div><div class="art-text"><span class="par">Se o consorciado sinistrado não tiver sido contemplado, o crédito será liberado a seus herdeiros ou beneficiários.</span></div>`,
       body: `<p>A circular prevê a contratação de <span class="highlight">seguro de vida</span> (prestamista) para os consorciados. Em caso de morte ou invalidez permanente do consorciado, o seguro quita as parcelas restantes, protegendo o grupo contra perda financeira e os herdeiros contra dívida.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Dona Helena, de 62 anos, aderiu a um grupo de imóveis. Infelizmente, ela falece no mês 30. O seguro prestamista quita todas as parcelas restantes. Se ela já tinha sido contemplada e adquirido o imóvel, os herdeiros recebem o bem livre de dívida. Se ainda não tinha sido contemplada, o crédito é liberado aos herdeiros como se ela tivesse sido contemplada, conforme as regras do contrato e da apólice.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Dona Helena, de 62 anos, aderiu a um grupo de imóveis. Infelizmente, ela falece no mês 30. O seguro prestamista quita todas as parcelas restantes. Se ela já tinha sido contemplada e adquirido o imóvel, os herdeiros recebem o bem livre de dívida. Se ainda não tinha sido contemplada, o crédito é liberado aos herdeiros como se ela tivesse sido contemplada, conforme as regras do contrato e da apólice.</p></div>`
     }
   ]
 },
 
-// ---- CIRCULAR 3.433 ----
+// ========== CIRCULAR 3.433 ==========
 circ3433: {
-  badge: "CIRCULAR BCB",
-  title: "Circular BCB nº 3.433/2009",
+  badge: "CIRCULAR BCB", title: "Circular BCB nº 3.433/2009",
   subtitle: "Dispõe sobre a autorização para administrar grupos de consórcio e requisitos para funcionamento.",
   link: "https://www.bcb.gov.br/pre/normativos/circ/2009/pdf/circ_3433_v1_L.pdf",
   linkLabel: "PDF oficial no site do BCB",
   topics: [
     {
-      id: "autorizacao",
-      num: "01",
-      title: "Requisitos para Autorização do BACEN",
-      ref: "Arts. 1º a 5º",
+      id: "autorizacao", num: "01", title: "Requisitos para Autorização do BACEN", ref: "Arts. 1º a 5º",
+      law: lawArt("Circ. 3.433, Art. 1º", '<span class="caput">A administração de grupos de consórcio somente pode ser exercida por pessoa jurídica previamente autorizada pelo Banco Central do Brasil.</span>') +
+           lawArt("Circ. 3.433, Art. 2º", '<span class="caput">O pedido de autorização para administrar grupos de consórcio deve ser instruído com:</span><span class="paragrafo">I — atos constitutivos da sociedade, registrados na forma da lei;</span><span class="paragrafo">II — comprovação do capital social mínimo integralizado;</span><span class="paragrafo">III — estudo de viabilidade econômico-financeira;</span><span class="paragrafo">IV — indicação dos administradores e dos controladores, com qualificação completa.</span>'),
+      art: `<div class="art-title">Art. 1º</div><div class="art-text"><span class="par">A administração de grupo de consórcio somente pode ser exercida por pessoa jurídica previamente autorizada pelo Banco Central do Brasil.</span></div><div class="art-title">Art. 2º</div><div class="art-text"><span class="par">O pedido de autorização deve ser instruído com: I — atos constitutivos; II — comprovação de integralização do capital social mínimo; III — estudo de viabilidade econômico-financeira; IV — indicação dos administradores; V — demonstração de capacidade técnica e idoneidade dos controladores.</span></div><div class="art-title">Art. 3º</div><div class="art-text"><span class="par">A administradora deve ser constituída sob a forma de sociedade limitada ou sociedade anônima.</span></div>`,
       body: `<p>Para operar como administradora de consórcios, a empresa deve obter <span class="highlight">autorização prévia do Banco Central</span>. Requisitos fundamentais: ser constituída como sociedade anônima (S.A.) ou limitada (LTDA), ter capital social mínimo conforme porte, e apresentar estudo de viabilidade econômico-financeira.</p>
 <p>O processo é burocrático e rigoroso — pode levar de 6 meses a mais de 1 ano. O BACEN analisa cada aspecto da empresa antes de conceder autorização.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Para a KonQ Consórcios obter autorização, será necessário: 1) constituir formalmente a empresa (S.A. ou LTDA), 2) integralizar o capital social mínimo, 3) enviar ao BACEN todo o dossiê: atos constitutivos, estudo de viabilidade, plano de negócios, políticas internas, qualificação dos sócios e diretores. O BACEN fará diligências, poderá pedir complementações, e só após satisfação de todos os requisitos emitirá a autorização.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Para a KonQ Consórcios obter autorização, será necessário: 1) constituir formalmente a empresa (S.A. ou LTDA), 2) integralizar o capital social mínimo, 3) enviar ao BACEN todo o dossiê: atos constitutivos, estudo de viabilidade, plano de negócios, políticas internas, qualificação dos sócios e diretores. O BACEN fará diligências, poderá pedir complementações, e só após satisfação de todos os requisitos emitirá a autorização.</p></div>`
     },
     {
-      id: "capital-minimo",
-      num: "02",
-      title: "Capital Social Mínimo",
-      ref: "Arts. 6º a 9º",
+      id: "capital-minimo", num: "02", title: "Capital Social Mínimo", ref: "Arts. 6º a 9º",
+      law: lawArt("Circ. 3.433, Art. 6º", '<span class="caput">A administradora de consórcios deve manter, permanentemente, capital social integralizado e patrimônio líquido de valor não inferior ao mínimo estabelecido pelo Conselho Monetário Nacional.</span>') +
+           lawArt("Circ. 3.433, Art. 8º", '<span class="caput">A administradora deve demonstrar, a qualquer tempo, a compatibilidade de seu patrimônio líquido com o volume de negócios e as responsabilidades assumidas.</span>'),
+      art: `<div class="art-title">Art. 6º</div><div class="art-text"><span class="par">A administradora deve manter, permanentemente, capital social integralizado e patrimônio líquido de valor não inferior ao mínimo fixado pelo Conselho Monetário Nacional.</span></div><div class="art-title">Art. 7º</div><div class="art-text"><span class="par">O capital social mínimo deve estar integralmente realizado em moeda corrente nacional.</span></div>`,
       body: `<p>O BACEN exige <span class="highlight">capital social mínimo integralizado</span> para autorização. O valor depende do porte e tipo de operação pretendida. Historicamente, os valores têm sido atualizados por resoluções do CMN.</p>
 <p>O capital deve estar efetivamente integralizado (depositado) — não basta ser subscrito. Além disso, a administradora deve manter patrimônio líquido compatível com seu volume de operações ao longo do tempo.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Se o capital mínimo vigente for R$ 5 milhões, a KonQ precisa ter esse valor efetivamente depositado no momento da solicitação — não é promessa futura. Se a KonQ crescer e seus grupos somarem R$ 500 milhões em créditos ativos, o BACEN pode exigir adequação do patrimônio líquido para suportar esse volume.</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>Consulte sempre o valor atualizado do capital mínimo nas normas vigentes do BACEN, pois os valores são revisados periodicamente.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Se o capital mínimo vigente for R$ 5 milhões, a KonQ precisa ter esse valor efetivamente depositado no momento da solicitação — não é promessa futura. Se a KonQ crescer e seus grupos somarem R$ 500 milhões em créditos ativos, o BACEN pode exigir adequação do patrimônio líquido para suportar esse volume.</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>Consulte sempre o valor atualizado do capital mínimo nas normas vigentes do BACEN, pois os valores são revisados periodicamente.</p></div>`
     },
     {
-      id: "idoneidade",
-      num: "03",
-      title: "Idoneidade e Capacidade Técnica",
-      ref: "Arts. 10 a 15",
+      id: "idoneidade", num: "03", title: "Idoneidade e Capacidade Técnica", ref: "Arts. 10 a 15",
+      law: lawArt("Circ. 3.433, Art. 10", '<span class="caput">O Banco Central do Brasil avaliará a idoneidade e a capacidade técnico-gerencial dos controladores e administradores da empresa requerente, podendo recusar a autorização se constatada a existência de restrições.</span>') +
+           lawArt("Circ. 3.433, Art. 12", '<span class="caput">Consideram-se restrições, para os fins desta Circular:</span><span class="paragrafo">I — condenação, por decisão transitada em julgado ou proferida por órgão colegiado, em processo criminal;</span><span class="paragrafo">II — declaração de insolvência ou inadimplência no cumprimento de obrigações financeiras;</span><span class="paragrafo">III — punição em processo administrativo, por parte de órgãos reguladores do mercado financeiro.</span>'),
+      art: `<div class="art-title">Art. 10</div><div class="art-text"><span class="par">O Banco Central avaliará a idoneidade e a capacidade técnica e financeira dos controladores e administradores.</span></div><div class="art-title">Art. 11</div><div class="art-text"><span class="par">São impeditivos à autorização: I — condenação criminal transitada em julgado; II — declaração de insolvência ou falência não reabilitada; III — impedimento vigente aplicado pelo BACEN ou CVM; IV — situação impeditiva de assunção de cargos em instituições financeiras.</span></div>`,
       body: `<p>O BACEN avalia a <span class="highlight">idoneidade moral e financeira e a capacidade técnica</span> dos sócios controladores, diretores e administradores. Quem tiver restrições no BACEN, condenações criminais, ou estiver em situação de insolvência pode inviabilizar a autorização.</p>
 <p>Os diretores responsáveis perante o BACEN devem ter formação e experiência compatíveis com a função. O BACEN pode entrevistar e exigir comprovação de experiência.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Na KonQ, Gilson Jr, Marcos e Walter Neto terão suas fichas analisadas pelo BACEN: antecedentes criminais, certidões de protestos, restrições no Serasa/SPC, processos judiciais relevantes, e histórico profissional. Se algum sócio tiver, por exemplo, uma empresa anterior que faliu com dívidas trabalhistas não quitadas, isso pode ser um impedimento.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Na KonQ, Gilson Jr, Marcos e Walter Neto terão suas fichas analisadas pelo BACEN: antecedentes criminais, certidões de protestos, restrições no Serasa/SPC, processos judiciais relevantes, e histórico profissional. Se algum sócio tiver, por exemplo, uma empresa anterior que faliu com dívidas trabalhistas não quitadas, isso pode ser um impedimento.</p></div>`
     },
     {
-      id: "alteracoes",
-      num: "04",
-      title: "Alterações Societárias",
-      ref: "Arts. 16 a 20",
+      id: "alteracoes", num: "04", title: "Alterações Societárias", ref: "Arts. 16 a 20",
+      law: lawArt("Circ. 3.433, Art. 16", '<span class="caput">Qualquer alteração na composição do grupo de controle, direta ou indiretamente, deve ser previamente submetida à aprovação do Banco Central do Brasil.</span>') +
+           lawArt("Circ. 3.433, Art. 18", '<span class="caput">A eleição ou nomeação de membros da diretoria e do conselho de administração deve ser comunicada ao Banco Central do Brasil, que poderá determinar a substituição de administrador que não preencha os requisitos exigidos.</span>'),
+      art: `<div class="art-title">Art. 16</div><div class="art-text"><span class="par">Dependem de prévia autorização do BACEN: I — mudança de objeto social; II — reforma que implique alteração do capital social; III — mudança de controle societário direto ou indireto; IV — fusão, cisão ou incorporação.</span></div>`,
       body: `<p>Qualquer mudança relevante na estrutura societária da administradora — <span class="highlight">alteração de controle, entrada/saída de sócios, mudança de diretores, fusão, cisão, incorporação</span> — deve ser previamente comunicada e, em muitos casos, aprovada pelo BACEN.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Se depois de 2 anos operando, a KonQ quiser trazer um investidor que ficará com 40% da empresa, essa operação precisa ser comunicada ao BACEN com antecedência. O novo sócio passará pela mesma análise de idoneidade que os fundadores passaram. Se o BACEN reprovar o novo sócio, a operação não pode ser concluída.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Se depois de 2 anos operando, a KonQ quiser trazer um investidor que ficará com 40% da empresa, essa operação precisa ser comunicada ao BACEN com antecedência. O novo sócio passará pela mesma análise de idoneidade que os fundadores passaram. Se o BACEN reprovar o novo sócio, a operação não pode ser concluída.</p></div>`
     },
     {
-      id: "auditoria",
-      num: "05",
-      title: "Auditoria Independente",
-      ref: "Arts. 21 a 24",
+      id: "auditoria", num: "05", title: "Auditoria Independente", ref: "Arts. 21 a 24",
+      law: lawArt("Circ. 3.433, Art. 21", '<span class="caput">As demonstrações financeiras da administradora de consórcios e dos grupos por ela administrados devem ser auditadas por auditor independente registrado na Comissão de Valores Mobiliários — CVM.</span>') +
+           lawArt("Circ. 3.433, Art. 23", '<span class="caput">O auditor independente deve comunicar ao Banco Central do Brasil, no prazo máximo de 3 (três) dias úteis, a ocorrência de eventos que possam ter repercussão relevante nas demonstrações financeiras ou nas operações da administradora.</span>'),
+      art: `<div class="art-title">Art. 21</div><div class="art-text"><span class="par">As demonstrações financeiras da administradora e dos grupos administrados devem ser auditadas por auditor independente registrado na CVM.</span></div><div class="art-title">Art. 22</div><div class="art-text"><span class="par">O relatório de auditoria deve ser encaminhado ao BACEN na forma e prazo estabelecidos.</span></div>`,
       body: `<p>A administradora de consórcios é obrigada a contratar <span class="highlight">auditoria externa independente</span> para examinar suas demonstrações financeiras e as dos grupos que administra. O auditor deve ser registrado na CVM e no CRC.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Anualmente, a KonQ contrata uma empresa de auditoria (ex: BDO, Grant Thornton, ou as Big Four) que examina: balanço patrimonial da KonQ, demonstrações de cada grupo ativo, segregação de recursos, adequação das aplicações financeiras, regularidade dos processos de contemplação. O relatório dos auditores é enviado ao BACEN e fica disponível para os consorciados.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Anualmente, a KonQ contrata uma empresa de auditoria (ex: BDO, Grant Thornton, ou as Big Four) que examina: balanço patrimonial da KonQ, demonstrações de cada grupo ativo, segregação de recursos, adequação das aplicações financeiras, regularidade dos processos de contemplação. O relatório dos auditores é enviado ao BACEN e fica disponível para os consorciados.</p></div>`
     },
     {
-      id: "cancelamento",
-      num: "06",
-      title: "Cancelamento de Autorização",
-      ref: "Arts. 25 a 30",
+      id: "cancelamento", num: "06", title: "Cancelamento de Autorização", ref: "Arts. 25 a 30",
+      law: lawArt("Circ. 3.433, Art. 25", '<span class="caput">O Banco Central do Brasil poderá cancelar a autorização para administrar grupos de consórcio nas seguintes hipóteses:</span><span class="paragrafo">I — não início de atividades no prazo de 180 (cento e oitenta) dias, contados da data de publicação do ato de autorização;</span><span class="paragrafo">II — paralisação das atividades por período superior a 6 (seis) meses;</span><span class="paragrafo">III — prática de atos contrários às normas legais e regulamentares que disciplinam o sistema de consórcios.</span>') +
+           lawArt("Circ. 3.433, Art. 28", '<span class="caput">No caso de cancelamento da autorização, a administradora deve promover a transferência dos grupos de consórcio em funcionamento para outra administradora autorizada, no prazo estabelecido pelo Banco Central do Brasil.</span>'),
+      art: `<div class="art-title">Art. 25</div><div class="art-text"><span class="par">O BACEN poderá cancelar a autorização quando verificar: I — prática de infrações graves; II — gestão temerária ou fraudulenta; III — insuficiência de patrimônio líquido; IV — inatividade operacional por prazo superior a 12 meses.</span></div><div class="art-title">Art. 27</div><div class="art-text"><span class="par">O cancelamento importará na transferência dos grupos para outra administradora autorizada ou no encerramento ordenado.</span></div>`,
       body: `<p>O BACEN pode cancelar a autorização de funcionamento em casos de: <span class="highlight">infrações graves, gestão temerária, insuficiência patrimonial, ou inatividade prolongada</span>. O cancelamento pode ser voluntário (a administradora solicita) ou compulsório (imposto pelo BACEN).</p>
 <p>Em caso de cancelamento, os grupos existentes devem ser transferidos para outra administradora autorizada ou encerrados ordeiramente.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A administradora XYZ Consórcios é pega desviando recursos de grupos para cobrir despesas operacionais próprias. O BACEN decreta intervenção, nomeia um interventor, e inicia processo de cancelamento. Os 15 grupos ativos da XYZ são transferidos para outra administradora regular, preservando os direitos dos consorciados. Os diretores da XYZ são responsabilizados administrativa e criminalmente.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A administradora XYZ Consórcios é pega desviando recursos de grupos para cobrir despesas operacionais próprias. O BACEN decreta intervenção, nomeia um interventor, e inicia processo de cancelamento. Os 15 grupos ativos da XYZ são transferidos para outra administradora regular, preservando os direitos dos consorciados. Os diretores da XYZ são responsabilizados administrativa e criminalmente.</p></div>`
     }
   ]
 },
 
-// ---- RESOLUÇÃO 4.515 ----
+// ========== RESOLUÇÃO 4.515 ==========
 res4515: {
-  badge: "RESOLUÇÃO CMN",
-  title: "Resolução CMN nº 4.515/2016",
+  badge: "RESOLUÇÃO CMN", title: "Resolução CMN nº 4.515/2016",
   subtitle: "Dispõe sobre a governança corporativa, controles internos e gestão de riscos das administradoras de consórcios.",
   link: "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas",
   linkLabel: "Buscar no site do BCB",
   topics: [
     {
-      id: "governanca",
-      num: "01",
-      title: "Estrutura de Governança",
-      ref: "Arts. 1º a 8º",
+      id: "governanca", num: "01", title: "Estrutura de Governança", ref: "Arts. 1º a 8º",
+      law: lawArt("Res. 4.515, Art. 2º", '<span class="caput">A administradora de consórcios deve implementar estrutura de governança compatível com a natureza, o porte, a complexidade, a estrutura, o perfil de risco e o modelo de negócio da instituição.</span>') +
+           lawArt("Res. 4.515, Art. 4º", '<span class="caput">A estrutura de governança deve prever a segregação de atividades de forma a evitar conflitos de interesses, assegurando que uma mesma pessoa não acumule funções que, em combinação, possam gerar conflitos.</span>'),
+      art: `<div class="art-title">Art. 1º</div><div class="art-text"><span class="par">As administradoras devem implementar estrutura de governança compatível com a natureza, o porte, a complexidade dos produtos e o perfil de risco da instituição.</span></div><div class="art-title">Art. 3º</div><div class="art-text"><span class="par">A estrutura de governança deve prever a segregação de atividades, de forma a evitar situações de conflito de interesses.</span></div><div class="art-title">Art. 5º</div><div class="art-text"><span class="par">A administradora deve designar diretor responsável pelo cumprimento das obrigações perante o Banco Central.</span></div>`,
       body: `<p>A administradora deve ter <span class="highlight">estrutura de governança compatível com seu porte e complexidade</span>: conselho de administração (se S.A. de maior porte), diretoria executiva, segregação de funções, e definição clara de competências e responsabilidades.</p>
 <p>O princípio é evitar que uma mesma pessoa concentre funções conflitantes — por exemplo, quem opera os grupos não pode ser quem faz a auditoria interna.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Na KonQ, a estrutura mínima seria: um diretor responsável pela operação dos grupos (Marcos), outro pela compliance e controles internos (Gilson Jr), e outro pela área financeira (Walter Neto). O diretor de compliance não pode ser subordinado ao de operações, garantindo independência para reportar irregularidades.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Na KonQ, a estrutura mínima seria: um diretor responsável pela operação dos grupos (Marcos), outro pela compliance e controles internos (Gilson Jr), e outro pela área financeira (Walter Neto). O diretor de compliance não pode ser subordinado ao de operações, garantindo independência para reportar irregularidades.</p></div>`
     },
     {
-      id: "controles-internos",
-      num: "02",
-      title: "Política de Controles Internos",
-      ref: "Arts. 9º a 15",
+      id: "controles-internos", num: "02", title: "Política de Controles Internos", ref: "Arts. 9º a 15",
+      law: lawArt("Res. 4.515, Art. 9º", '<span class="caput">A administradora de consórcios deve implementar e manter política de controles internos efetiva e consistente com a natureza, o porte, a complexidade e o perfil de risco, contemplando:</span><span class="paragrafo">I — a definição de processos, procedimentos e responsabilidades;</span><span class="paragrafo">II — meios para assegurar a integridade e a confiabilidade das informações geradas;</span><span class="paragrafo">III — a avaliação periódica da efetividade dos controles implementados.</span>'),
+      art: `<div class="art-title">Art. 9º</div><div class="art-text"><span class="par">A administradora deve implementar e manter política de controles internos efetiva e consistente com a natureza e o risco de suas operações.</span></div><div class="art-title">Art. 10</div><div class="art-text"><span class="par">A política deve contemplar: I — procedimentos aplicáveis aos processos operacionais; II — canais de comunicação que assegurem acesso a informações relevantes; III — acompanhamento sistemático das atividades; IV — verificação da aderência às normas vigentes.</span></div>`,
       body: `<p>A administradora deve implementar <span class="highlight">política de controles internos</span> que garanta: integridade e confiabilidade das informações, conformidade com leis e regulamentos, eficácia e eficiência das operações, e salvaguarda dos ativos dos grupos.</p>
 <p>Isso inclui: manuais de procedimentos, trilhas de auditoria, controles de acesso a sistemas, reconciliações periódicas, e plano de continuidade de negócios.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Na prática, a KonQ precisa ter: manual de operações documentado (como se processa uma contemplação, passo a passo), alçadas de aprovação (liberação de crédito acima de R$ 100.000 precisa de dois diretores), reconciliação diária entre sistema e banco (os valores no software batem com os extratos bancários?), e backup de dados com plano de recuperação em caso de desastre.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Na prática, a KonQ precisa ter: manual de operações documentado (como se processa uma contemplação, passo a passo), alçadas de aprovação (liberação de crédito acima de R$ 100.000 precisa de dois diretores), reconciliação diária entre sistema e banco (os valores no software batem com os extratos bancários?), e backup de dados com plano de recuperação em caso de desastre.</p></div>`
     },
     {
-      id: "gestao-riscos",
-      num: "03",
-      title: "Gestão de Riscos",
-      ref: "Arts. 16 a 22",
+      id: "gestao-riscos", num: "03", title: "Gestão de Riscos", ref: "Arts. 16 a 22",
+      law: lawArt("Res. 4.515, Art. 16", '<span class="caput">A administradora de consórcios deve implementar estrutura de gerenciamento de riscos compatível com a natureza, o porte, a complexidade e o perfil de risco, que permita a identificação, a mensuração, o controle e a mitigação dos riscos.</span>') +
+           lawArt("Res. 4.515, Art. 18", '<span class="caput">O gerenciamento de riscos deve contemplar, no mínimo:</span><span class="paragrafo">I — risco operacional;</span><span class="paragrafo">II — risco de crédito;</span><span class="paragrafo">III — risco de liquidez;</span><span class="paragrafo">IV — risco legal.</span>'),
+      art: `<div class="art-title">Art. 16</div><div class="art-text"><span class="par">A administradora deve implementar estrutura de gerenciamento de riscos compatível com suas operações.</span></div><div class="art-title">Art. 17</div><div class="art-text"><span class="par">A estrutura deve prever: I — identificação dos riscos; II — mensuração; III — controle; IV — mitigação; V — monitoramento.</span></div><div class="art-title">Art. 18</div><div class="art-text"><span class="par">Os riscos incluem, no mínimo: I — risco operacional; II — risco de crédito; III — risco de liquidez; IV — risco legal.</span></div>`,
       body: `<p>A administradora deve identificar, medir, controlar e mitigar os riscos de sua operação. Os principais: <span class="highlight">risco operacional</span> (falhas de processo, fraude, TI), <span class="highlight">risco de crédito</span> (inadimplência dos consorciados), <span class="highlight">risco de liquidez</span> (capacidade de honrar as contemplações), e <span class="highlight">risco legal</span> (processos judiciais, sanções regulatórias).</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A KonQ cria uma matriz de riscos: (1) Risco de crédito — 20% de inadimplência no Grupo 003 comprometeria as contemplações → mitigação: análise de crédito pré-adesão + fundo de reserva robusto. (2) Risco operacional — falha no sistema no dia da assembleia → mitigação: servidor redundante + procedimento manual de contingência. (3) Risco de liquidez — muitos lances baixos, sobra de caixa insuficiente → mitigação: modelagem financeira prévia e monitoramento mensal.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A KonQ cria uma matriz de riscos: (1) Risco de crédito — 20% de inadimplência no Grupo 003 comprometeria as contemplações → mitigação: análise de crédito pré-adesão + fundo de reserva robusto. (2) Risco operacional — falha no sistema no dia da assembleia → mitigação: servidor redundante + procedimento manual de contingência. (3) Risco de liquidez — muitos lances baixos, sobra de caixa insuficiente → mitigação: modelagem financeira prévia e monitoramento mensal.</p></div>`
     },
     {
-      id: "ouvidoria",
-      num: "04",
-      title: "Ouvidoria",
-      ref: "Arts. 23 a 26",
+      id: "ouvidoria", num: "04", title: "Ouvidoria", ref: "Arts. 23 a 26",
+      law: lawArt("Res. 4.515, Art. 23", '<span class="caput">A administradora de consórcios deve instituir componente organizacional de ouvidoria, com a atribuição de atuar como canal de comunicação entre a instituição e os consorciados e demais usuários de seus serviços, inclusive na mediação de conflitos.</span>') +
+           lawArt("Res. 4.515, Art. 25", '<span class="caput">A ouvidoria deve ter acesso às informações necessárias para a elaboração de resposta adequada às reclamações recebidas, bem como prestar atendimento de última instância às demandas dos clientes que não tiverem sido solucionadas nos canais de atendimento primário.</span>'),
+      art: `<div class="art-title">Art. 23</div><div class="art-text"><span class="par">A administradora deve manter ouvidoria como canal de comunicação entre a administradora e os consorciados.</span></div><div class="art-title">Art. 24</div><div class="art-text"><span class="par">A ouvidoria tem por finalidade assegurar a observância dos direitos do consumidor e atuar como instância recursal para demandas não solucionadas nos canais primários.</span></div><div class="art-title">Art. 25</div><div class="art-text"><span class="par">A ouvidoria deve ter acesso direto ao conselho de administração ou à diretoria da administradora.</span></div>`,
       body: `<p>A administradora deve ter <span class="highlight">ouvidoria</span> como canal de última instância para reclamações dos consorciados. A ouvidoria atua quando o SAC não resolveu o problema. Deve ser independente e ter acesso direto à diretoria.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Roberto reclama ao SAC da KonQ que sua contemplação está atrasada há 30 dias. O SAC não resolve. Roberto então aciona a Ouvidoria, que tem 10 dias úteis para responder. O ouvidor investiga internamente, descobre que houve falha no processo de análise de garantias, e determina correção imediata com pedido de desculpas formal. A Ouvidoria reporta o caso à diretoria para evitar recorrência.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Roberto reclama ao SAC da KonQ que sua contemplação está atrasada há 30 dias. O SAC não resolve. Roberto então aciona a Ouvidoria, que tem 10 dias úteis para responder. O ouvidor investiga internamente, descobre que houve falha no processo de análise de garantias, e determina correção imediata com pedido de desculpas formal. A Ouvidoria reporta o caso à diretoria para evitar recorrência.</p></div>`
     }
   ]
 },
 
-// ---- LEI 9.613 ----
+// ========== LEI 9.613 ==========
 lei9613: {
-  badge: "LEI FEDERAL",
-  title: "Lei nº 9.613/1998",
+  badge: "LEI FEDERAL", title: "Lei nº 9.613/1998",
   subtitle: "Prevenção à Lavagem de Dinheiro e Financiamento do Terrorismo (PLD/FT) — aplicável às administradoras de consórcios.",
   link: "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
   linkLabel: "Texto integral no Planalto",
   topics: [
     {
-      id: "kyc",
-      num: "01",
-      title: "Identificação de Clientes (KYC)",
-      ref: "Art. 10",
+      id: "kyc", num: "01", title: "Identificação de Clientes (KYC)", ref: "Art. 10",
+      law: lawArt("Art. 10", '<span class="caput">As pessoas referidas no art. 9º:</span><span class="paragrafo">I — identificarão seus clientes e manterão cadastro atualizado, nos termos de instruções emanadas das autoridades competentes;</span><span class="paragrafo">II — manterão registro de toda transação em moeda nacional ou estrangeira, títulos e valores mobiliários, títulos de crédito, metais, ou qualquer ativo passível de ser convertido em dinheiro, que ultrapassar limite fixado pela autoridade competente e nos termos de instruções por esta expedidas;</span><span class="paragrafo">III — deverão adotar políticas, procedimentos e controles internos, compatíveis com seu porte e volume de operações.</span>'),
+      art: `<div class="art-title">Art. 10</div><div class="art-text"><span class="par">As pessoas referidas no art. 9º: I — identificarão seus clientes e manterão cadastro atualizado; II — manterão registro de toda transação que ultrapassar limite fixado pela autoridade competente; III — deverão adotar políticas, procedimentos e controles internos compatíveis com seu porte e volume de operações.</span></div>`,
       body: `<p>A administradora deve <span class="highlight">identificar e qualificar seus clientes</span> antes da adesão: nome completo, CPF/CNPJ, endereço, profissão, renda, origem dos recursos. Deve manter cadastro atualizado e verificar a veracidade das informações.</p>
 <p>"Conheça seu cliente" (KYC — Know Your Customer) é a base de toda a política de PLD. Não é opcional — é obrigação legal.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Carlos quer aderir a 5 cotas de um grupo de imóveis (R$ 300.000 cada = R$ 1,5 milhão em crédito). A KonQ deve: verificar a identidade de Carlos, confirmar endereço e profissão, entender a origem da renda dele (como ele vai pagar R$ 12.500/mês em parcelas?), e avaliar se esse perfil é compatível com o volume financeiro. Se Carlos declarar ser autônomo com renda de R$ 5.000/mês, há uma incompatibilidade que precisa ser investigada.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Carlos quer aderir a 5 cotas de um grupo de imóveis (R$ 300.000 cada = R$ 1,5 milhão em crédito). A KonQ deve: verificar a identidade de Carlos, confirmar endereço e profissão, entender a origem da renda dele (como ele vai pagar R$ 12.500/mês em parcelas?), e avaliar se esse perfil é compatível com o volume financeiro. Se Carlos declarar ser autônomo com renda de R$ 5.000/mês, há uma incompatibilidade que precisa ser investigada.</p></div>`
     },
     {
-      id: "operacoes-suspeitas",
-      num: "02",
-      title: "Comunicação de Operações Suspeitas",
-      ref: "Art. 11",
+      id: "operacoes-suspeitas", num: "02", title: "Comunicação de Operações Suspeitas", ref: "Art. 11",
+      law: lawArt("Art. 11", '<span class="caput">As pessoas referidas no art. 9º:</span><span class="paragrafo">I — dispensarão especial atenção às operações que, nos termos de instruções emanadas das autoridades competentes, possam constituir-se em sérios indícios dos crimes previstos nesta Lei, ou com eles relacionar-se;</span><span class="paragrafo">II — deverão comunicar ao Coaf, abstendo-se de dar ciência de tal ato a qualquer pessoa, inclusive àquela à qual se refira a informação, no prazo de 24 (vinte e quatro) horas, a proposta ou realização:</span><span class="paragrafo">a) de todas as transações referidas no inciso II do art. 10 que ultrapassarem limite fixado, para esse fim, pela mesma autoridade e na forma e condições por ela estabelecidas;</span><span class="paragrafo">b) das operações referidas no inciso I deste artigo.</span>'),
+      art: `<div class="art-title">Art. 11</div><div class="art-text"><span class="par">As pessoas referidas no art. 9º: I — dispensarão especial atenção às operações que possam constituir-se em sérios indícios dos crimes previstos nesta Lei; II — deverão comunicar ao COAF, abstendo-se de dar ciência de tal ato a qualquer pessoa, inclusive àquela à qual se refira a informação, no prazo de 24 horas.</span><span class="par"><span class="par-label">§ 3º</span> As comunicações de boa-fé não acarretarão responsabilidade civil ou administrativa.</span></div>`,
       body: `<p>A administradora deve comunicar ao <span class="highlight">COAF (Conselho de Controle de Atividades Financeiras)</span> operações que apresentem indícios de lavagem de dinheiro: transações incompatíveis com a renda do cliente, pagamentos em espécie de valores elevados, movimentações atípicas, ou qualquer situação suspeita.</p>
 <p>A comunicação deve ser feita em até 24 horas após a identificação e é sigilosa — a administradora NÃO pode informar ao cliente que fez a comunicação.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Um consorciado da KonQ tenta pagar 12 parcelas antecipadas em dinheiro vivo, totalizando R$ 150.000. Isso acende um alerta: pagamento em espécie de alto valor, sem origem justificada. A KonQ deve: 1) registrar a operação, 2) comunicar ao COAF em 24h, 3) NÃO alertar o cliente, 4) continuar monitorando a conta dele. O COAF investigará por conta própria.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Um consorciado da KonQ tenta pagar 12 parcelas antecipadas em dinheiro vivo, totalizando R$ 150.000. Isso acende um alerta: pagamento em espécie de alto valor, sem origem justificada. A KonQ deve: 1) registrar a operação, 2) comunicar ao COAF em 24h, 3) NÃO alertar o cliente, 4) continuar monitorando a conta dele. O COAF investigará por conta própria.</p></div>`
     },
     {
-      id: "pep",
-      num: "03",
-      title: "Pessoas Expostas Politicamente (PEP)",
-      ref: "Art. 12",
+      id: "pep", num: "03", title: "Pessoas Expostas Politicamente (PEP)", ref: "Art. 12",
+      law: lawArt("Art. 11, § 3º (incluído pela Lei 12.683/2012)", '<span class="caput">As pessoas de que trata o art. 9º devem adotar procedimentos reforçados de identificação e monitoramento de operações envolvendo pessoas politicamente expostas, seus familiares, estreitos colaboradores, bem como empresas e pessoas jurídicas de que participem.</span>'),
+      art: `<div class="art-title">Art. 12 (regulamentação)</div><div class="art-text"><span class="par">As pessoas mencionadas no art. 9º devem dispensar especial atenção às operações envolvendo pessoa exposta politicamente. Consideram-se PEP: os detentores de mandatos eletivos dos Poderes Executivo e Legislativo da União; os ministros de Estado ou equivalentes; os membros dos tribunais superiores e do TCU; bem como seus familiares e estreitos colaboradores.</span></div>`,
       body: `<p>Pessoas Expostas Politicamente — políticos, servidores de alto escalão, seus familiares e associados — requerem <span class="highlight">diligência reforçada (Enhanced Due Diligence)</span>. A administradora deve identificar se o cliente é PEP, monitorar suas transações com atenção especial, e documentar toda a relação comercial.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Um vereador de uma cidade do interior quer aderir a um grupo de imóveis da KonQ. O sistema de cadastro identifica que ele é PEP. A KonQ deve: classificar como cliente de risco elevado, exigir documentação adicional sobre patrimônio e renda, monitorar todas as movimentações com frequência maior, e manter o registro por pelo menos 5 anos após o fim da relação.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Um vereador de uma cidade do interior quer aderir a um grupo de imóveis da KonQ. O sistema de cadastro identifica que ele é PEP. A KonQ deve: classificar como cliente de risco elevado, exigir documentação adicional sobre patrimônio e renda, monitorar todas as movimentações com frequência maior, e manter o registro por pelo menos 5 anos após o fim da relação.</p></div>`
     },
     {
-      id: "penalidades-pld",
-      num: "04",
-      title: "Penalidades por Descumprimento",
-      ref: "Arts. 12 a 14",
+      id: "penalidades-pld", num: "04", title: "Penalidades por Descumprimento", ref: "Arts. 12 a 14",
+      law: lawArt("Art. 12", '<span class="caput">Às pessoas referidas no art. 9º, bem como aos administradores das pessoas jurídicas, que deixem de cumprir as obrigações previstas nos arts. 10 e 11 serão aplicadas, cumulativamente ou não, pelas autoridades competentes, as seguintes sanções:</span><span class="paragrafo">I — advertência;</span><span class="paragrafo">II — multa pecuniária variável não superior:</span><span class="paragrafo">a) ao dobro do valor da operação;</span><span class="paragrafo">b) ao valor de R$ 20.000.000,00 (vinte milhões de reais);</span><span class="paragrafo">III — inabilitação temporária, pelo prazo de até dez anos, para o exercício do cargo de administrador.</span>'),
+      art: `<div class="art-title">Art. 12</div><div class="art-text"><span class="par">Às pessoas que deixem de cumprir as obrigações previstas nos arts. 10 e 11 serão aplicadas: I — advertência; II — multa pecuniária não superior a: a) ao dobro do valor da operação; b) ao dobro do lucro obtido; ou c) R$ 20.000.000,00; III — inabilitação temporária, pelo prazo de até dez anos; IV — cassação ou suspensão da autorização para funcionamento.</span></div>`,
       body: `<p>O descumprimento das obrigações de PLD pode resultar em: <span class="highlight">multa de até R$ 20 milhões (ou o dobro do valor da operação)</span>, inabilitação temporária para exercer cargo de administração, cassação da autorização de funcionamento, e até responsabilização criminal dos diretores.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>A administradora ABC Consórcios não implementou política de PLD adequada. O BACEN descobre em inspeção que não havia cadastro KYC completo dos clientes, nenhuma comunicação ao COAF foi feita em 3 anos, e o compliance era inexistente. Resultado: multa de R$ 2 milhões, inabilitação dos diretores por 5 anos, e processo administrativo que pode levar ao cancelamento da autorização.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>A administradora ABC Consórcios não implementou política de PLD adequada. O BACEN descobre em inspeção que não havia cadastro KYC completo dos clientes, nenhuma comunicação ao COAF foi feita em 3 anos, e o compliance era inexistente. Resultado: multa de R$ 2 milhões, inabilitação dos diretores por 5 anos, e processo administrativo que pode levar ao cancelamento da autorização.</p></div>`
     }
   ]
 },
 
-// ---- CDC ----
+// ========== CDC ==========
 cdc: {
-  badge: "LEI FEDERAL",
-  title: "Lei nº 8.078/1990 — CDC",
+  badge: "LEI FEDERAL", title: "Lei nº 8.078/1990 — CDC",
   subtitle: "Código de Defesa do Consumidor — aplicado subsidiariamente à relação administradora-consorciado.",
   link: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
   linkLabel: "Texto integral no Planalto",
   topics: [
     {
-      id: "transparencia",
-      num: "01",
-      title: "Transparência e Informação Adequada",
-      ref: "Arts. 6º, 31 e 46",
+      id: "transparencia", num: "01", title: "Transparência e Informação Adequada", ref: "Arts. 6º, 31 e 46",
+      law: lawArt("Art. 6º, III", '<span class="caput">São direitos básicos do consumidor: a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade, tributos incidentes e preço, bem como sobre os riscos que apresentem.</span>') +
+           lawArt("Art. 31", '<span class="caput">A oferta e apresentação de produtos ou serviços devem assegurar informações corretas, claras, precisas, ostensivas e em língua portuguesa sobre suas características, qualidades, quantidade, composição, preço, garantia, prazos de validade e origem, entre outros dados.</span>') +
+           lawArt("Art. 46", '<span class="caput">Os contratos que regulam as relações de consumo não obrigarão os consumidores, se não lhes for dada a oportunidade de tomar conhecimento prévio de seu conteúdo, ou se os respectivos instrumentos forem redigidos de modo a dificultar a compreensão de seu sentido e alcance.</span>'),
+      art: `<div class="art-title">Art. 6º, III</div><div class="art-text"><span class="par">São direitos básicos do consumidor: a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade, tributos incidentes e preço, bem como sobre os riscos que apresentem.</span></div><div class="art-title">Art. 31</div><div class="art-text"><span class="par">A oferta e apresentação de produtos ou serviços devem assegurar informações corretas, claras, precisas, ostensivas e em língua portuguesa.</span></div><div class="art-title">Art. 46</div><div class="art-text"><span class="par">Os contratos não obrigarão os consumidores, se não lhes for dada a oportunidade de tomar conhecimento prévio de seu conteúdo, ou se os instrumentos forem redigidos de modo a dificultar a compreensão.</span></div>`,
       body: `<p>O consumidor (consorciado) tem direito à <span class="highlight">informação clara, precisa e ostensiva</span> sobre o produto/serviço. No consórcio, isso significa: o contrato deve ser compreensível, todos os custos devem ser explicitados (taxa de administração, seguro, fundo de reserva), e nenhuma cláusula pode estar "escondida" em letras miúdas.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>O vendedor da KonQ apresenta o consórcio para Juliana. Ele deve informar claramente: "Sua parcela será R$ 1.200/mês, sendo R$ 800 de fundo comum, R$ 200 de taxa de administração, R$ 100 de fundo de reserva e R$ 100 de seguro. Você pode ser contemplada por sorteio ou lance. NÃO há garantia de quando será contemplada. O prazo do grupo é 72 meses." Se o vendedor disser "você vai ser contemplada em 3 meses", isso é informação enganosa.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>O vendedor da KonQ apresenta o consórcio para Juliana. Ele deve informar claramente: "Sua parcela será R$ 1.200/mês, sendo R$ 800 de fundo comum, R$ 200 de taxa de administração, R$ 100 de fundo de reserva e R$ 100 de seguro. Você pode ser contemplada por sorteio ou lance. NÃO há garantia de quando será contemplada. O prazo do grupo é 72 meses." Se o vendedor disser "você vai ser contemplada em 3 meses", isso é informação enganosa.</p></div>`
     },
     {
-      id: "arrependimento",
-      num: "02",
-      title: "Direito de Arrependimento",
-      ref: "Art. 49",
+      id: "arrependimento", num: "02", title: "Direito de Arrependimento", ref: "Art. 49",
+      law: lawArt("Art. 49", '<span class="caput">O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial, especialmente por telefone ou a domicílio.</span><span class="paragrafo">Parágrafo único. Se o consumidor exercitar o direito de arrependimento previsto neste artigo, os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados.</span>'),
+      art: `<div class="art-title">Art. 49</div><div class="art-text"><span class="par">O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação ocorrer fora do estabelecimento comercial, especialmente por telefone ou a domicílio.</span><span class="par"><span class="par-label">Parágrafo único.</span> Se o consumidor exercitar o direito de arrependimento, os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados.</span></div>`,
       body: `<p>Em vendas realizadas <span class="highlight">fora do estabelecimento comercial</span> (internet, telefone, porta a porta), o consumidor tem <span class="highlight">7 dias</span> para desistir do contrato sem qualquer ônus, contados da assinatura ou do recebimento do produto/serviço.</p>
 <p>Isso é crucial para consórcios vendidos digitalmente — que é exatamente o modelo da KonQ.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>Roberto compra uma cota de consórcio pelo app da KonQ numa sexta-feira à noite. Na segunda-feira, muda de ideia. Ele tem até a sexta-feira seguinte (7 dias corridos) para exercer o direito de arrependimento. A KonQ deve devolver 100% dos valores pagos, inclusive a taxa de adesão, sem nenhuma cobrança. Esse é um direito absoluto do consumidor para vendas não presenciais.</p>
-</div>
-<div class="warn-box">
-  <div class="warn-label">⚠️ Ponto de atenção</div>
-  <p>O direito de arrependimento de 7 dias se aplica a vendas fora do estabelecimento. Para vendas realizadas presencialmente no escritório da administradora, esse prazo NÃO se aplica automaticamente — a desistência segue as regras da Lei 11.795.</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>Roberto compra uma cota de consórcio pelo app da KonQ numa sexta-feira à noite. Na segunda-feira, muda de ideia. Ele tem até a sexta-feira seguinte (7 dias corridos) para exercer o direito de arrependimento. A KonQ deve devolver 100% dos valores pagos, inclusive a taxa de adesão, sem nenhuma cobrança. Esse é um direito absoluto do consumidor para vendas não presenciais.</p></div>
+<div class="warn-box"><div class="warn-label">⚠️ Ponto de atenção</div><p>O direito de arrependimento de 7 dias se aplica a vendas fora do estabelecimento. Para vendas realizadas presencialmente no escritório da administradora, esse prazo NÃO se aplica automaticamente — a desistência segue as regras da Lei 11.795.</p></div>`
     },
     {
-      id: "publicidade",
-      num: "03",
-      title: "Publicidade Enganosa e Abusiva",
-      ref: "Arts. 36 a 38",
+      id: "publicidade", num: "03", title: "Publicidade Enganosa e Abusiva", ref: "Arts. 36 a 38",
+      law: lawArt("Art. 37", '<span class="caput">É proibida toda publicidade enganosa ou abusiva.</span><span class="paragrafo">§ 1º É enganosa qualquer modalidade de informação ou comunicação de caráter publicitário, inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor a respeito da natureza, características, qualidade, quantidade, propriedades, origem, preço e quaisquer outros dados sobre produtos e serviços.</span><span class="paragrafo">§ 3º Para os efeitos deste código, a publicidade é enganosa por omissão quando deixar de informar sobre dado essencial do produto ou serviço.</span>'),
+      art: `<div class="art-title">Art. 36</div><div class="art-text"><span class="par">A publicidade deve ser veiculada de tal forma que o consumidor, fácil e imediatamente, a identifique como tal.</span></div><div class="art-title">Art. 37, § 1º</div><div class="art-text"><span class="par">É enganosa qualquer modalidade de informação ou comunicação de caráter publicitário, inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor a respeito da natureza, características, qualidade, quantidade, propriedades, origem, preço e quaisquer outros dados sobre produtos e serviços.</span></div>`,
       body: `<p>É proibida toda <span class="highlight">publicidade enganosa ou abusiva</span>. No consórcio, os maiores riscos são: prometer contemplação rápida ou garantida, comparar incorretamente com financiamento, omitir custos totais, ou usar linguagem que induza o consumidor a erro.</p>
-<div class="example-box">
-  <div class="example-label">💡 Exemplo Prático</div>
-  <p>O que a KonQ NÃO pode fazer na publicidade: "Consórcio com contemplação garantida nos primeiros meses!" (falso — contemplação depende de sorteio ou lance). "Sem juros!" (tecnicamente correto que não há juros, mas omitir a taxa de administração é enganoso). "Melhor que poupança!" (consórcio não é investimento, comparação indevida). O que pode: "Parcelas a partir de R$ 500/mês, sem juros bancários, com possibilidade de contemplação por sorteio ou lance."</p>
-</div>`
+<div class="example-box"><div class="example-label">💡 Exemplo Prático</div><p>O que a KonQ NÃO pode fazer na publicidade: "Consórcio com contemplação garantida nos primeiros meses!" (falso — contemplação depende de sorteio ou lance). "Sem juros!" (tecnicamente correto que não há juros, mas omitir a taxa de administração é enganoso). "Melhor que poupança!" (consórcio não é investimento, comparação indevida). O que pode: "Parcelas a partir de R$ 500/mês, sem juros bancários, com possibilidade de contemplação por sorteio ou lance."</p></div>`
     }
   ]
 }
-
 };
 
-// ===================== QUIZ DATA =====================
+// ========== QUIZ DATA ==========
 const QUIZ = [
   {q:"Qual é o conceito central que define o consórcio segundo a Lei 11.795/2008?",o:["Empréstimo coletivo com juros bancários","Autofinanciamento por grupo de pessoas para aquisição de bens/serviços","Investimento de renda fixa regulado pela CVM","Financiamento subsidiado pelo governo federal"],c:1,e:"A lei define consórcio como reunião de pessoas para autofinanciamento — os participantes financiam uns aos outros, sem envolvimento de crédito bancário."},
-  {q:"Quem é o órgão responsável por autorizar e fiscalizar as administradoras de consórcios?",o:["CVM — Comissão de Valores Mobiliários","SUSEP — Superintendência de Seguros Privados","BACEN — Banco Central do Brasil","Ministério da Economia"],c:2,e:"O Banco Central do Brasil é o órgão responsável pela normatização, supervisão, fiscalização e controle do sistema de consórcios (art. 6º da Lei 11.795)."},
+  {q:"Quem é o órgão responsável por autorizar e fiscalizar as administradoras de consórcios?",o:["CVM — Comissão de Valores Mobiliários","SUSEP — Superintendência de Seguros Privados","BACEN — Banco Central do Brasil","Ministério da Economia"],c:2,e:"O Banco Central do Brasil é o órgão responsável pela normatização, supervisão, fiscalização e controle do sistema de consórcios (art. 8º da Lei 11.795)."},
   {q:"Os recursos de um grupo de consórcio podem ser utilizados para cobrir déficits de outro grupo da mesma administradora?",o:["Sim, desde que aprovado em assembleia","Sim, se a administradora garantir a reposição em 30 dias","Não — cada grupo tem autonomia patrimonial","Sim, em caso de emergência comprovada"],c:2,e:"Cada grupo tem autonomia patrimonial — os recursos são segregados e não podem ser utilizados para cobrir obrigações de outros grupos ou da administradora."},
-  {q:"Qual é a penalidade para quem administra grupo de consórcio sem autorização do BACEN?",o:["Multa administrativa apenas","Detenção de 1 a 2 anos + multa","Advertência pública","Proibição de atuar no mercado financeiro por 5 anos"],c:1,e:"O art. 7º da Lei 11.795 prevê detenção de 1 a 2 anos e multa para quem administrar grupos de consórcio sem autorização do BACEN."},
+  {q:"Qual é a penalidade para quem administra grupo de consórcio sem autorização do BACEN?",o:["Multa administrativa apenas","Detenção de 1 a 2 anos + multa","Advertência pública","Proibição de atuar no mercado financeiro por 5 anos"],c:1,e:"O art. 41 da Lei 11.795 equipara a prática ao crime de estelionato, com pena de detenção de 1 a 2 anos e multa."},
   {q:"A carta de crédito do consórcio pode ser utilizada para qualquer finalidade?",o:["Sim, é dinheiro livre do consorciado","Não — o crédito é vinculado à finalidade do grupo","Sim, se o consorciado pagar taxa extra","Depende da assembleia do grupo"],c:1,e:"A carta de crédito é vinculada à finalidade do grupo. Se o grupo é de imóveis, o crédito só pode ser usado para adquirir imóvel."},
   {q:"Quais são as duas formas de contemplação previstas na lei?",o:["Sorteio e lance","Sorteio e antiguidade","Lance e mérito financeiro","Sorteio e indicação"],c:0,e:"A Lei 11.795 prevê contemplação por sorteio (aleatório) e por lance (competitivo, baseado na antecipação de parcelas)."},
   {q:"O que acontece com o consorciado contemplado que não apresenta garantias?",o:["Recebe o crédito normalmente, sem garantias","Perde a contemplação e volta para o sorteio do mês seguinte","É excluído do grupo automaticamente","O crédito é liberado com desconto de 30%"],c:1,e:"A contemplação não garante a entrega imediata do crédito. O contemplado precisa apresentar garantias, estar adimplente e passar por análise para receber o recurso."},
   {q:"O que é lance embutido?",o:["Lance pago com recursos de terceiros","Lance oferecido usando parte do próprio crédito","Lance combinado entre dois consorciados","Lance parcelado em 12 vezes"],c:1,e:"No lance embutido, o consorciado usa parte do próprio crédito como lance. Se contemplado, recebe o crédito deduzido do valor do lance."},
   {q:"Em que tipo de investimento a administradora pode aplicar os recursos do grupo?",o:["Ações na bolsa de valores","Criptomoedas e fundos multimercado","Títulos públicos, CDBs e renda fixa de baixo risco","Qualquer investimento que maximize o retorno"],c:2,e:"A Circular 3.432 determina que os recursos devem ser aplicados em investimentos de baixo risco: títulos públicos federais, CDBs de instituições com boa classificação, ou fundos de renda fixa."},
   {q:"Os rendimentos das aplicações financeiras do grupo pertencem a quem?",o:["À administradora, como receita operacional","Ao grupo — são incorporados ao patrimônio coletivo","Metade para a administradora, metade para o grupo","Ao BACEN, como taxa regulatória"],c:1,e:"Os rendimentos das aplicações pertencem ao grupo, não à administradora. São distribuídos aos consorciados na prestação de contas final."},
-  {q:"Qual é o prazo que a administradora tem para prestar contas após o encerramento do grupo?",o:["30 dias","60 dias","90 dias","120 dias"],c:1,e:"A lei determina prazo de 60 dias após o encerramento do grupo para a administradora apresentar a prestação de contas final."},
+  {q:"Qual é o prazo que a administradora tem para prestar contas após o encerramento do grupo?",o:["30 dias","60 dias","90 dias","120 dias"],c:1,e:"O art. 33 da Lei determina prazo de 60 dias após o encerramento do grupo para a administradora apresentar a prestação de contas final."},
   {q:"O que acontece se houver sobra financeira ao final do grupo?",o:["Fica com a administradora","É dividida entre os consorciados proporcionalmente","É doada para caridade","Vai para o fundo de reserva do próximo grupo"],c:1,e:"Se houver sobra (fundo de reserva não utilizado + rendimentos), é dividida entre os consorciados proporcionalmente. O mesmo vale para perdas."},
   {q:"O consorciado excluído por inadimplência recebe devolução dos valores pagos imediatamente?",o:["Sim, em até 30 dias","Sim, se pagar multa de 10%","Não — recebe por sorteio ou no encerramento do grupo","Não — perde tudo que pagou"],c:2,e:"Após a Lei 11.795, o excluído NÃO recebe devolução imediata. Recebe por sorteio nas assembleias ou no encerramento do grupo, com deduções contratuais."},
   {q:"Qual é a finalidade do fundo de reserva?",o:["Remunerar a administradora","Cobrir inadimplência e insuficiências do grupo","Investir em marketing do grupo","Pagar impostos do grupo"],c:1,e:"O fundo de reserva é destinado a cobrir inadimplência, despesas extraordinárias e insuficiências financeiras do grupo."},
@@ -1134,7 +685,7 @@ const QUIZ = [
   {q:"Em quanto tempo a administradora deve comunicar operações suspeitas ao COAF?",o:["7 dias úteis","30 dias","24 horas","48 horas"],c:2,e:"A comunicação de operações suspeitas ao COAF deve ser feita em até 24 horas após a identificação, e é sigilosa."},
   {q:"A administradora pode informar ao cliente que fez uma comunicação ao COAF?",o:["Sim — é direito do cliente saber","Sim, mas apenas por escrito","Não — a comunicação é sigilosa","Sim, se o cliente solicitar formalmente"],c:2,e:"A comunicação ao COAF é sigilosa. A administradora NÃO pode alertar o cliente de que fez a comunicação — isso comprometeria a investigação."},
   {q:"O que é PEP no contexto de PLD?",o:["Pessoa com Empréstimo Pendente","Pessoa Exposta Politicamente","Programa de Ensino Profissional","Perfil Especial de Pagamento"],c:1,e:"PEP = Pessoa Exposta Politicamente: políticos, servidores de alto escalão, seus familiares e associados, que requerem diligência reforçada."},
-  {q:"Qual é a multa máxima por descumprimento das obrigações de PLD?",o:["R$ 1 milhão","R$ 5 milhões","R$ 20 milhões ou o dobro do valor da operação","R$ 50 milhões"],c:2,e:"A Lei 9.613 prevê multa de até R$ 20 milhões ou o dobro do valor da operação, além de inabilitação e possível responsabilização criminal."},
+  {q:"Qual é a multa máxima por descumprimento das obrigações de PLD?",o:["R$ 1 milhão","R$ 5 milhões","R$ 20 milhões ou o dobro do valor da operação","R$ 50 milhões"],c:2,e:"O art. 12 da Lei 9.613 prevê multa de até R$ 20 milhões ou o dobro do valor da operação, além de inabilitação e possível responsabilização criminal."},
   {q:"Por quanto tempo a administradora deve manter os registros de operações para fins de PLD?",o:["1 ano","3 anos","5 anos","10 anos"],c:2,e:"Os registros devem ser mantidos por no mínimo 5 anos após o término da operação ou da relação comercial."},
   {q:"Qual é o prazo de arrependimento do consumidor para vendas fora do estabelecimento (CDC)?",o:["3 dias","5 dias úteis","7 dias corridos","15 dias"],c:2,e:"O art. 49 do CDC garante 7 dias corridos para o consumidor desistir de contratos firmados fora do estabelecimento comercial."},
   {q:"O direito de arrependimento de 7 dias se aplica a consórcios vendidos presencialmente no escritório da administradora?",o:["Sim — sempre se aplica","Não — aplica-se apenas a vendas fora do estabelecimento","Sim, mas com multa de 5%","Depende do valor da cota"],c:1,e:"O direito de arrependimento do art. 49 aplica-se apenas a vendas realizadas fora do estabelecimento (internet, telefone, porta a porta). Vendas presenciais seguem as regras da Lei 11.795."},
@@ -1163,15 +714,14 @@ const QUIZ = [
   {q:"Qual é a principal diferença entre consórcio e financiamento bancário?",o:["No consórcio não há taxa de administração","No financiamento não há contemplação","No consórcio há autofinanciamento coletivo sem juros bancários","No consórcio o bem é entregue imediatamente"],c:2,e:"A principal diferença é que no consórcio há autofinanciamento coletivo — os participantes financiam uns aos outros — sem juros bancários. No financiamento, o banco empresta e cobra juros."}
 ];
 
-// ===================== STATE =====================
+// ========== STATE ==========
 let currentSection = 'home';
 let checkedTopics = JSON.parse(localStorage.getItem('konq_checked') || '{}');
 let quizAnswers = JSON.parse(localStorage.getItem('konq_quiz') || '{}');
 let currentQuizPage = 0;
 const QUIZ_PER_PAGE = 5;
 
-// ===================== RENDER =====================
-
+// ========== RENDER ==========
 function showSection(id) {
   currentSection = id;
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -1179,59 +729,52 @@ function showSection(id) {
     if(n.getAttribute('onclick') && n.getAttribute('onclick').includes(id)) n.classList.add('active');
   });
   document.querySelector('.sidebar').classList.remove('open');
-
   if (id === 'quiz') { renderQuiz(); return; }
-
   const s = SECTIONS[id];
   if (!s) return;
-
-  let html = `<div class="animate-in">`;
-  html += `<div class="section-badge">${s.badge}</div>`;
-  html += `<h1 class="section-title">${s.title}</h1>`;
-  html += `<p class="section-subtitle">${s.subtitle}</p>`;
-
-  if (s.link) {
-    html += `<a href="${s.link}" target="_blank" class="doc-link">📄 ${s.linkLabel} ↗</a>`;
-  }
-
+  let html = '<div class="animate-in">';
+  html += '<div class="section-badge">' + s.badge + '</div>';
+  html += '<h1 class="section-title">' + s.title + '</h1>';
+  html += '<p class="section-subtitle">' + s.subtitle + '</p>';
+  if (s.link) html += '<a href="' + s.link + '" target="_blank" class="doc-link">📄 ' + s.linkLabel + ' ↗</a>';
   if (s.content) html += s.content;
-
   if (s.topics) {
-    s.topics.forEach(t => {
-      const isChecked = checkedTopics[t.id];
-      html += `
-        <div class="topic-card" id="card-${t.id}">
-          <div class="topic-header" onclick="toggleTopic('${t.id}')">
-            <div class="topic-number">${t.num}</div>
-            <div>
-              <div class="topic-title">${t.title}</div>
-              <div class="topic-ref">${t.ref}</div>
-            </div>
-            <div class="topic-toggle" id="toggle-${t.id}">▼</div>
-          </div>
-          <div class="topic-body" id="body-${t.id}">
-            ${t.body}
-            <button class="check-btn ${isChecked?'checked':''}" onclick="markStudied('${t.id}', this)">
-              ${isChecked ? '✓ Estudado' : '☐ Marcar como estudado'}
-            </button>
-          </div>
-        </div>
-      `;
+    s.topics.forEach(function(t) {
+      var isChecked = checkedTopics[t.id];
+      html += '<div class="topic-card" id="card-' + t.id + '">';
+      html += '<div class="topic-header" onclick="toggleTopic(\'' + t.id + '\')">';
+      html += '<div class="topic-number">' + t.num + '</div>';
+      html += '<div><div class="topic-title">' + t.title + '</div><div class="topic-ref">' + t.ref + '</div></div>';
+      html += '<div class="topic-toggle" id="toggle-' + t.id + '">▼</div></div>';
+      html += '<div class="topic-body" id="body-' + t.id + '">';
+      // LAW TEXT BLOCK
+      if (t.art) {
+        html += '<button class="legal-toggle-btn" id="legbtn-' + t.id + '" onclick="event.stopPropagation(); toggleLegal(\'' + t.id + '\')">📖 Ver texto dos artigos</button>';
+        html += '<div class="legal-text-box" id="legal-' + t.id + '"><div class="legal-header">Texto Legal — ' + t.ref + '</div>' + t.art + '</div>';
+      }
+      html += t.body;
+      html += '<button class="check-btn ' + (isChecked ? 'checked' : '') + '" onclick="markStudied(\'' + t.id + '\', this)">';
+      html += isChecked ? '✓ Estudado' : '☐ Marcar como estudado';
+      html += '</button></div></div>';
     });
   }
-
-  html += `</div>`;
+  html += '</div>';
   document.getElementById('mainContent').innerHTML = html;
-  document.getElementById('mainContent').scrollTop = 0;
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   updateProgress();
 }
 
 function toggleTopic(id) {
-  const body = document.getElementById('body-' + id);
-  const toggle = document.getElementById('toggle-' + id);
-  body.classList.toggle('open');
-  toggle.classList.toggle('open');
+  document.getElementById('body-' + id).classList.toggle('open');
+  document.getElementById('toggle-' + id).classList.toggle('open');
+}
+
+function toggleLegal(id) {
+  var box = document.getElementById('legal-' + id);
+  var btn = document.getElementById('legbtn-' + id);
+  box.classList.toggle('open');
+  btn.classList.toggle('open');
+  btn.innerHTML = box.classList.contains('open') ? '📖 Ocultar texto dos artigos' : '📖 Ver texto dos artigos';
 }
 
 function markStudied(id, btn) {
@@ -1243,126 +786,81 @@ function markStudied(id, btn) {
 }
 
 function updateProgress() {
-  let total = 0;
-  let done = 0;
-  Object.values(SECTIONS).forEach(s => {
-    if (s.topics) {
-      s.topics.forEach(t => {
-        total++;
-        if (checkedTopics[t.id]) done++;
-      });
-    }
+  var total = 0, done = 0;
+  Object.values(SECTIONS).forEach(function(s) {
+    if (s.topics) s.topics.forEach(function(t) { total++; if (checkedTopics[t.id]) done++; });
   });
-  const pct = total > 0 ? Math.round((done/total)*100) : 0;
-  const bar = document.getElementById('progressBar');
-  const label = document.getElementById('progressLabel');
+  var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  var bar = document.getElementById('progressBar');
+  var label = document.getElementById('progressLabel');
   if (bar) bar.style.width = pct + '%';
-  if (label) label.textContent = `${done} de ${total} tópicos estudados (${pct}%)`;
+  if (label) label.textContent = done + ' de ' + total + ' tópicos estudados (' + pct + '%)';
 }
 
-// ===================== QUIZ =====================
-
+// ========== QUIZ ==========
 function renderQuiz() {
-  const start = currentQuizPage * QUIZ_PER_PAGE;
-  const end = Math.min(start + QUIZ_PER_PAGE, QUIZ.length);
-  const totalPages = Math.ceil(QUIZ.length / QUIZ_PER_PAGE);
-
-  let correct = 0, answered = 0;
-  Object.entries(quizAnswers).forEach(([k,v]) => {
-    answered++;
-    if (v.correct) correct++;
-  });
-
-  let html = `<div class="animate-in">`;
-  html += `<div class="section-badge">AVALIAÇÃO</div>`;
-  html += `<h1 class="section-title">Quiz — 50 Questões</h1>`;
-  html += `<div class="quiz-header">
-    <p class="section-subtitle" style="margin-bottom:0">Teste seu conhecimento sobre a regulamentação de consórcios.</p>
-    <div class="quiz-score">${correct}/${answered} corretas ${answered > 0 ? '(' + Math.round(correct/answered*100) + '%)' : ''}</div>
-  </div>`;
-
+  var start = currentQuizPage * QUIZ_PER_PAGE;
+  var end = Math.min(start + QUIZ_PER_PAGE, QUIZ.length);
+  var totalPages = Math.ceil(QUIZ.length / QUIZ_PER_PAGE);
+  var correct = 0, answered = 0;
+  Object.entries(quizAnswers).forEach(function(e) { answered++; if (e[1].correct) correct++; });
+  var html = '<div class="animate-in">';
+  html += '<div class="section-badge">AVALIAÇÃO</div>';
+  html += '<h1 class="section-title">Quiz — 50 Questões</h1>';
+  html += '<div class="quiz-header"><p class="section-subtitle" style="margin-bottom:0">Teste seu conhecimento sobre a regulamentação de consórcios.</p>';
+  html += '<div class="quiz-score">' + correct + '/' + answered + ' corretas ' + (answered > 0 ? '(' + Math.round(correct / answered * 100) + '%)' : '') + '</div></div>';
   if (answered === QUIZ.length) {
-    const pct = Math.round(correct/QUIZ.length*100);
-    let msg = pct >= 80 ? '🎉 Excelente! Você domina o regulatório.' : pct >= 60 ? '👍 Bom resultado, mas revise os tópicos errados.' : '📚 Recomendo revisitar os conteúdos antes de prosseguir.';
-    html += `<div style="background:var(--bg3);border-radius:12px;padding:20px;margin-bottom:24px;text-align:center;">
-      <div style="font-size:48px;margin-bottom:8px;">${pct >= 80 ? '🏆' : pct >= 60 ? '📊' : '📖'}</div>
-      <div style="font-size:20px;font-weight:700;margin-bottom:8px;">${correct} de ${QUIZ.length} — ${pct}%</div>
-      <div style="color:var(--text2);font-size:14px;">${msg}</div>
-      <button class="btn-primary" style="margin-top:16px;" onclick="resetQuiz()">Refazer Quiz</button>
-    </div>`;
+    var pct = Math.round(correct / QUIZ.length * 100);
+    var msg = pct >= 80 ? '🎉 Excelente! Você domina o regulatório.' : pct >= 60 ? '👍 Bom resultado, mas revise os tópicos errados.' : '📚 Recomendo revisitar os conteúdos antes de prosseguir.';
+    html += '<div style="background:var(--bg3);border-radius:12px;padding:20px;margin-bottom:24px;text-align:center;">';
+    html += '<div style="font-size:48px;margin-bottom:8px;">' + (pct >= 80 ? '🏆' : pct >= 60 ? '📊' : '📖') + '</div>';
+    html += '<div style="font-size:20px;font-weight:700;margin-bottom:8px;">' + correct + ' de ' + QUIZ.length + ' — ' + pct + '%</div>';
+    html += '<div style="color:var(--text2);font-size:14px;">' + msg + '</div>';
+    html += '<button class="btn-primary" style="margin-top:16px;" onclick="resetQuiz()">Refazer Quiz</button></div>';
   }
-
-  for (let i = start; i < end; i++) {
-    const q = QUIZ[i];
-    const a = quizAnswers[i];
-    html += `<div class="quiz-card" id="qcard-${i}">
-      <div class="q-number">QUESTÃO ${i+1} DE ${QUIZ.length}</div>
-      <div class="q-text">${q.q}</div>`;
-
-    q.o.forEach((opt, oi) => {
-      let cls = '';
+  for (var i = start; i < end; i++) {
+    var q = QUIZ[i], a = quizAnswers[i];
+    html += '<div class="quiz-card" id="qcard-' + i + '"><div class="q-number">QUESTÃO ' + (i + 1) + ' DE ' + QUIZ.length + '</div>';
+    html += '<div class="q-text">' + q.q + '</div>';
+    q.o.forEach(function(opt, oi) {
+      var cls = '';
       if (a !== undefined) {
         cls = 'answered';
         if (oi === q.c) cls += ' correct show-correct';
         else if (oi === a.selected && !a.correct) cls += ' wrong';
       }
-      html += `<button class="quiz-option ${cls}" ${a !== undefined ? 'disabled' : ''} onclick="answerQuiz(${i},${oi})">${String.fromCharCode(65+oi)}) ${opt}</button>`;
+      html += '<button class="quiz-option ' + cls + '" ' + (a !== undefined ? 'disabled' : '') + ' onclick="answerQuiz(' + i + ',' + oi + ')">' + String.fromCharCode(65 + oi) + ') ' + opt + '</button>';
     });
-
-    if (a !== undefined) {
-      html += `<div class="quiz-explanation"><strong>${a.correct ? '✓ Correto!' : '✗ Incorreto.'}</strong> ${q.e}</div>`;
-    }
-
-    html += `</div>`;
+    if (a !== undefined) html += '<div class="quiz-explanation"><strong>' + (a.correct ? '✓ Correto!' : '✗ Incorreto.') + '</strong> ' + q.e + '</div>';
+    html += '</div>';
   }
-
-  html += `<div class="quiz-nav">`;
-  for (let p = 0; p < totalPages; p++) {
-    let pgClass = p === currentQuizPage ? 'current' : '';
-    // check if any in this page are answered
-    let allCorrect = true, anyWrong = false, anyAnswered = false;
-    for (let j = p*QUIZ_PER_PAGE; j < Math.min((p+1)*QUIZ_PER_PAGE, QUIZ.length); j++) {
-      if (quizAnswers[j] !== undefined) {
-        anyAnswered = true;
-        if (!quizAnswers[j].correct) { allCorrect = false; anyWrong = true; }
-      } else { allCorrect = false; }
+  html += '<div class="quiz-nav">';
+  for (var p = 0; p < totalPages; p++) {
+    var pgClass = p === currentQuizPage ? 'current' : '';
+    var allC = true, anyW = false, anyA = false;
+    for (var j = p * QUIZ_PER_PAGE; j < Math.min((p + 1) * QUIZ_PER_PAGE, QUIZ.length); j++) {
+      if (quizAnswers[j] !== undefined) { anyA = true; if (!quizAnswers[j].correct) { allC = false; anyW = true; } } else allC = false;
     }
-    if (anyAnswered && allCorrect) pgClass += ' q-correct';
-    else if (anyWrong) pgClass += ' q-wrong';
-    html += `<button class="${pgClass}" onclick="quizPage(${p})">${p*QUIZ_PER_PAGE+1}-${Math.min((p+1)*QUIZ_PER_PAGE, QUIZ.length)}</button>`;
+    if (anyA && allC) pgClass += ' q-correct'; else if (anyW) pgClass += ' q-wrong';
+    html += '<button class="' + pgClass + '" onclick="quizPage(' + p + ')">' + (p * QUIZ_PER_PAGE + 1) + '-' + Math.min((p + 1) * QUIZ_PER_PAGE, QUIZ.length) + '</button>';
   }
-  html += `</div>`;
-  html += `</div>`;
-
+  html += '</div></div>';
   document.getElementById('mainContent').innerHTML = html;
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
 function answerQuiz(qi, oi) {
-  const q = QUIZ[qi];
-  quizAnswers[qi] = { selected: oi, correct: oi === q.c };
+  quizAnswers[qi] = { selected: oi, correct: oi === QUIZ[qi].c };
   localStorage.setItem('konq_quiz', JSON.stringify(quizAnswers));
   renderQuiz();
-  // scroll to question
-  setTimeout(() => {
-    const el = document.getElementById('qcard-' + qi);
-    if (el) el.scrollIntoView({behavior:'smooth', block:'center'});
-  }, 100);
+  setTimeout(function() { var el = document.getElementById('qcard-' + qi); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
 }
 
-function quizPage(p) {
-  currentQuizPage = p;
-  renderQuiz();
-}
+function quizPage(p) { currentQuizPage = p; renderQuiz(); }
 
-function resetQuiz() {
-  quizAnswers = {};
-  localStorage.removeItem('konq_quiz');
-  currentQuizPage = 0;
-  renderQuiz();
-}
+function resetQuiz() { quizAnswers = {}; localStorage.removeItem('konq_quiz'); currentQuizPage = 0; renderQuiz(); }
 
-// ===================== INIT =====================
+// ========== INIT ==========
 showSection('home');
 </script>
 </body>
